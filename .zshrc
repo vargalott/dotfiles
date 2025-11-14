@@ -1,3 +1,5 @@
+export LC_ALL=en_US.UTF-8
+
 # Prompt
 (( $+commands[tput] )) && tput setaf 1 &>/dev/null \
   && base_prompt='%F{magenta}%D{%Y-%m-%d %H:%M:%S} %B%F{red}%n@%m %b%F{blue}%~%f -> ' \
