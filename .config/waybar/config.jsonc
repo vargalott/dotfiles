@@ -1,0 +1,91 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["custom/logo", "hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "privacy",
+    "tray",
+    "wireplumber#icon",
+    "wireplumber#value",
+    "clock",
+    "hyprland/language",
+    "custom/power",
+  ],
+
+  "custom/logo": {
+    "format": "\udb80\ude38",
+    "on-click": "pgrep -x wofi >/dev/null 2>&1 || wofi --conf ~/.config/wofi/menu.conf --style ~/.config/wofi/style.css --show drun",
+  },
+
+  "hyprland/workspaces": {
+    "format": "{name} {icon}",
+    "format-icons": {
+      "default": "\uf10c",
+      "active": "\uf111",
+      "urgent": "\uf192",
+    },
+    "on-click": "activate",
+  },
+
+  "privacy": {
+    "icon-spacing": 4,
+    "icon-size": 16,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24,
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24,
+      },
+    ],
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10,
+    "show-passive-items": true,
+  },
+
+  "wireplumber#icon": {
+    "format": "{icon}",
+    "format-muted": "\udb81\udf5f",
+    "format-icons": [
+      "\udb81\udd7f",
+      "\udb81\udd80",
+      "\udb81\udd80",
+      "\udb81\udd7e",
+    ],
+    "max-volume": 100,
+    "scroll-step": 2,
+    "on-click": "pavucontrol",
+  },
+
+  "wireplumber#value": {
+    "format": "{volume}%",
+    "format-muted": "0%",
+    "max-volume": 100,
+    "scroll-step": 2,
+    "on-click": "pavucontrol",
+  },
+
+  "hyprland/language": {
+    "format": "{short}",
+    "on-click": "hyprctl switchxkblayout current next",
+  },
+
+  "clock": {
+    "format": "{:%H:%M:%S | %Y-%m-%d}",
+    "interval": 1,
+  },
+
+  "custom/power": {
+    "format": "\uf011",
+    "on-click": "~/.config/wofi/powermenu.sh",
+  },
+}

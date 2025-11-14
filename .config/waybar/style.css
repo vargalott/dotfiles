@@ -1,0 +1,71 @@
+* {
+    font-family: "Iosevka Nerd Font";
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    border-radius: 0px;
+    padding: 0;
+    margin: 1px;
+    /*min-height: 26px;*/
+}
+
+#waybar {
+    color: #eeeeee;
+    background-color: #000000;
+}
+
+#custom-logo {
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+#custom-logo:hover {
+    color: #929292;
+    transition: 0.1s ease-in;
+}
+
+#workspaces button {
+    border-radius: 10px;
+    padding: 0 7px;
+    font-size: 100px;
+}
+
+#workspaces button:hover {
+    color: #929292;
+    transition: 0.1s ease-in;
+    background: transparent;
+}
+
+#workspaces button.active:hover {
+    color: #eeeeee;
+}
+
+#window,
+#privacy,
+#tray,
+#clock,
+#language,
+#custom-power {
+    padding: 0 10px;
+}
+
+#wireplumber.icon {
+    font-size: 22px;
+    min-width: 26px;
+    margin-right: -2px;
+}
+
+#wireplumber.value {
+    min-width: 34px;
+}
+
+#custom-power {
+    padding-right: 20px;
+}
+
+#custom-power:hover {
+    color: #929292;
+    transition: 0.1s ease-in;
+    background: transparent;
+}
