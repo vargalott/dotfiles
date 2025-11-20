@@ -2,7 +2,7 @@ export LC_ALL=en_US.UTF-8
 
 # Prompt
 (( $+commands[tput] )) && tput setaf 1 &>/dev/null \
-  && base_prompt='%F{magenta}%D{%Y-%m-%d %H:%M:%S} %B%F{red}%n@%m %b%F{blue}%~%f -> ' \
+  && base_prompt='%F{yellow}%D{%Y-%m-%d %H:%M:%S} %B%F{green}%n@%m %b%F{blue}%~%f -> ' \
   || base_prompt='%D{%Y-%m-%d %H:%M:%S} %n@%m %~ -> '
 precmd() {
     local ret=$?
@@ -27,13 +27,15 @@ SAVEHIST=10000
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias cat='bat'
 alias ll='ls -alF --group-directories-first'
 alias ducks='du -hs * | sort -hr'
 alias reload='source ~/.zshrc'
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
-alias pi='paru -S'
-alias pu='paru -Syu'
-alias pr='paru -Rs'
+alias pkgin='paru -S'
+alias pkgup='paru -Syu --noconfirm'
+alias pkgrm='paru -Rs'
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
