@@ -1,8 +1,13 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["custom/logo", "hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces",
+  ],
+  "modules-center": [
+    "hyprland/window",
+  ],
   "modules-right": [
     "privacy",
     "tray",
