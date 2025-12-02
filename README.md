@@ -1,7 +1,7 @@
 ## dotfiles 
 
 ```
-hyprland(uwsm-managed)
+hyprland
 |--hyprpaper
 |--hyprlock
 |--hyprsunset
