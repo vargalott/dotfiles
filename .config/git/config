@@ -1,0 +1,12 @@
+[user]
+name = Mykola Symon
+email = vargalott@gmail.com
+
+[core]
+editor = code --wait
+
+[pull]
+ff = only
+
+[init]
+defaultBranch = main
