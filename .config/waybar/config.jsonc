@@ -1,6 +1,7 @@
 {
   "layer": "top",
   "position": "top",
+
   "modules-left": [
     "custom/logo",
     "hyprland/workspaces",
@@ -24,8 +25,9 @@
   },
 
   "hyprland/workspaces": {
-    "format": "{name} {icon}",
+    "format": "{icon}",
     "format-icons": {
+      "10": "",
       "default": "\uf10c",
       "active": "\uf111",
       "urgent": "\uf192",
@@ -78,15 +80,15 @@
     "scroll-step": 2,
     "on-click": "pavucontrol",
   },
+  
+  "clock": {
+    "format": "{:%H:%M:%S | %Y-%m-%d}",
+    "interval": 1,
+  },
 
   "hyprland/language": {
     "format": "{short}",
     "on-click": "hyprctl switchxkblayout current next",
-  },
-
-  "clock": {
-    "format": "{:%H:%M:%S | %Y-%m-%d}",
-    "interval": 1,
   },
 
   "custom/power": {
