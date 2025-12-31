@@ -1,0 +1,18 @@
+# /etc/systemd/system/lidm.service
+
+[Unit]
+Description=TUI display manager
+After=systemd-user-sessions.service plymouth-quit-wait.service
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/lidm 1
+StandardInput=tty
+StandardOutput=tty
+StandardError=tty
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+
+[Install]
+Alias=display-manager.service
