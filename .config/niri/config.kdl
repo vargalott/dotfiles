@@ -300,12 +300,14 @@ window-rule {
     default-column-width 	{ fixed 640; }
     default-window-height 	{ fixed 500; }
 }
+
 window-rule {
     match app-id="^zen$"
     match app-id="^org.telegram.desktop$"
     match app-id="^code$"
     open-maximized true
 }
+
 window-rule {
     match app-id="$xdg-desktop-portal-.*^"
     match app-id="^mpv$"
@@ -314,9 +316,9 @@ window-rule {
     match app-id="^org.telegram.desktop$" title="^Media viewer$"
     match app-id="^steam$" title="^Friends List$"
     match app-id="^steam$" title="^Steam Settings$"
-    match app-id="^zen$" title="Extension: (Bitwarden Password Manager)"
     open-floating true
 }
+
 window-rule {
     match app-id="^steam$" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=0 y=0 relative-to="bottom-right"
