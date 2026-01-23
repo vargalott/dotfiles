@@ -39,7 +39,7 @@ spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLA
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1" // polkit-gnome
 spawn-at-startup "hyprpaper"
 spawn-at-startup "hyprsunset"
-spawn-at-startup "dunst"
+spawn-at-startup "mako"
 spawn-sh-at-startup "~/.config/waybar/run.sh"
 
 // Applications
