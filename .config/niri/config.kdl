@@ -37,15 +37,15 @@ output "HDMI-A-1" {
 // Core
 spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" // possible apps long launch fix
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1" // polkit-gnome
+spawn-sh-at-startup "~/.config/waybar/run.sh"
 spawn-at-startup "hyprpaper"
 spawn-at-startup "hyprsunset"
 spawn-at-startup "mako"
-spawn-sh-at-startup "~/.config/waybar/run.sh"
 
 // Applications
 spawn-at-startup "clash-verge"
 spawn-at-startup "zen-browser"
-spawn-sh-at-startup "Telegram"
+spawn-at-startup "Telegram"
 
 
 //
