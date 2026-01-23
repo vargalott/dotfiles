@@ -22,7 +22,7 @@ hotkey-overlay {
 
 output "HDMI-A-1" {
     mode "1920x1080@60"
-     position x=0 y=0
+    position x=0 y=0
     scale 1
     transform "normal"
 }
@@ -155,7 +155,7 @@ binds {
     Mod+Ctrl+Page_Down 	{ move-workspace-down; }
     Mod+Ctrl+Page_Up   	{ move-workspace-up; }
 
-       // Navigation with mouse
+    // Navigation with mouse
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp cooldown-ms=150 	{ focus-workspace-up; }
     Mod+Shift+WheelScrollDown      		{ focus-column-right; }
@@ -272,7 +272,7 @@ cursor {
 
 overview {
     zoom 0.6
-    backdrop-color "#262626"
+    backdrop-color "#383838"
 
     workspace-shadow {
         softness 40
@@ -305,6 +305,7 @@ window-rule {
     match app-id="^zen$"
     match app-id="^org.telegram.desktop$"
     match app-id="^code$"
+    match app-id="^steam$"
     open-maximized true
 }
 
