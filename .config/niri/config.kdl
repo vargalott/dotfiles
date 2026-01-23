@@ -40,7 +40,7 @@ spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1" 
 spawn-sh-at-startup "~/.config/waybar/run.sh"
 spawn-at-startup "hyprpaper"
 spawn-at-startup "hyprsunset"
-spawn-at-startup "mako"
+spawn-at-startup "dunst"
 
 // Applications
 spawn-at-startup "clash-verge"
@@ -323,4 +323,9 @@ window-rule {
 window-rule {
     match app-id="^steam$" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=0 y=0 relative-to="bottom-right"
+}
+
+window-rule {
+    match app-id="^clash-verge$"
+    open-maximized-to-edges false
 }
