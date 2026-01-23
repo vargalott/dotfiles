@@ -1,0 +1,360 @@
+//
+// GLOBAL
+// https://yalter.github.io/niri/Configuration:-Miscellaneous
+//
+screenshot-path null
+prefer-no-csd
+
+xwayland-satellite {
+    path "xwayland-satellite"
+}
+
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
+
+
+//
+// MONITORS
+// https://yalter.github.io/niri/Configuration:-Outputs
+//
+
+output "HDMI-A-1" {
+    mode "1920x1080@60"
+     position x=0 y=0
+    scale 1
+    transform "normal"
+}
+
+
+//
+// AUTOSTART
+// https://yalter.github.io/niri/Configuration:-Miscellaneous#spawn-at-startup
+// https://yalter.github.io/niri/Configuration:-Miscellaneous#spawn-sh-at-startup
+//
+
+// Core
+spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" // possible apps long launch fix
+spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1" // polkit-gnome
+spawn-at-startup "hyprpaper"
+spawn-at-startup "hyprsunset"
+spawn-at-startup "dunst"
+spawn-sh-at-startup "~/.config/waybar/run.sh"
+
+// Applications
+spawn-at-startup "clash-verge"
+spawn-at-startup "zen-browser"
+spawn-sh-at-startup "Telegram"
+
+
+//
+// INPUT
+// https://yalter.github.io/niri/Configuration:-Input
+//
+
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            options "grp:alt_shift_toggle"
+        }
+    }
+
+    mouse {
+        // off
+        // natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-method "no-scroll"
+    }
+
+    focus-follows-mouse
+    // warp-mouse-to-focus
+    // workspace-auto-back-and-forth
+}
+
+
+//
+// KEYBINDINGS
+// https://yalter.github.io/niri/Configuration:-Key-Bindings
+//
+
+binds {
+    // Help
+    Mod+Shift+Slash 	{ show-hotkey-overlay; }
+
+    // Application bindings
+    Mod+T 				{ spawn "kitty"; }
+    Mod+E 				{ spawn "thunar"; }
+    Mod+B 				{ spawn "zen-browser"; }
+    Mod+L 				{ spawn "hyprlock"; }
+    Mod+R 				{ spawn-sh "~/.config/fuzzel/menu.sh"; }
+    Mod+P 				{ spawn-sh "~/.config/fuzzel/powermenu.sh"; }
+    Mod+Y 				{ spawn-sh "~/.config/waybar/run.sh"; }
+
+    // Finer adjustments
+    Mod+Minus 			{ set-column-width "-10%"; }
+    Mod+Equal 			{ set-column-width "+10%"; }
+    Mod+Shift+Minus 	{ set-window-height "-10%"; }
+    Mod+Shift+Equal 	{ set-window-height "+10%"; }
+        
+    Mod+D				{ switch-preset-column-width; }
+    Mod+Shift+D 		{ switch-preset-window-height; }
+    Mod+Shift+F			{ maximize-column; }
+    Mod+Ctrl+F 			{ expand-column-to-available-width; }
+
+    // Screenshots
+    Print				{ screenshot-screen; }
+    Mod+Print	 		{ screenshot-window; }
+    Shift+Print			{ screenshot; }
+
+    // Multimedia keys
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1.0"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
+    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
+    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+
+    // Navigation
+    Mod+O repeat=false	{ toggle-overview; }
+    Mod+Q repeat=false	{ close-window; }
+    Mod+C 				{ center-column; }
+    Mod+Ctrl+C 			{ center-visible-columns; }
+    Mod+F 				{ fullscreen-window; }
+    Mod+V       		{ toggle-window-floating; }
+    Mod+Ctrl+V	 		{ switch-focus-between-floating-and-tiling; }
+
+    Mod+BracketLeft  	{ consume-or-expel-window-left; }
+    Mod+BracketRight 	{ consume-or-expel-window-right; }
+    Mod+Comma  			{ consume-window-into-column; }
+    Mod+Period 			{ expel-window-from-column; }
+    
+    Mod+Left  			{ focus-column-left; }
+    Mod+Down  			{ focus-window-down; }
+    Mod+Up    			{ focus-window-up; }
+    Mod+Right 			{ focus-column-right; }
+
+    Mod+Shift+Left  	{ move-column-left; }
+    Mod+Shift+Down  	{ move-window-down; }
+    Mod+Shift+Up    	{ move-window-up; }
+    Mod+Shift+Right 	{ move-column-right; }
+
+    Mod+Home			{ focus-column-first; }
+    Mod+End  			{ focus-column-last; }
+    Mod+Shift+Home 		{ move-column-to-first; }
+    Mod+Shift+End  		{ move-column-to-last; }
+    Mod+Shift+Page_Down { move-column-to-workspace-down; }
+    Mod+Shift+Page_Up   { move-column-to-workspace-up; }
+
+    Mod+Page_Down      	{ focus-workspace-down; }
+    Mod+Page_Up        	{ focus-workspace-up; }
+    Mod+Ctrl+Page_Down 	{ move-workspace-down; }
+    Mod+Ctrl+Page_Up   	{ move-workspace-up; }
+
+       // Navigation with mouse
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp cooldown-ms=150 	{ focus-workspace-up; }
+    Mod+Shift+WheelScrollDown      		{ focus-column-right; }
+    Mod+Shift+WheelScrollUp        		{ focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown 		{ move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   		{ move-column-left; }
+
+    // Workspaces
+    // You can refer to workspaces by index. However, keep in mind that
+    // niri is a dynamic workspace system, so these commands are kind of
+    // "best effort". Trying to refer to a workspace index bigger than
+    // the current workspace count will instead refer to the bottommost
+    // (empty) workspace.
+    Mod+1 		{ focus-workspace 1; }
+    Mod+2 		{ focus-workspace 2; }
+    Mod+3 		{ focus-workspace 3; }
+    Mod+4 		{ focus-workspace 4; }
+    Mod+5 		{ focus-workspace 5; }
+    Mod+6 		{ focus-workspace 6; }
+    Mod+7 		{ focus-workspace 7; }
+    Mod+8 		{ focus-workspace 8; }
+    Mod+9 		{ focus-workspace 9; }
+    Mod+Ctrl+1 	{ move-column-to-workspace 1; }
+    Mod+Ctrl+2 	{ move-column-to-workspace 2; }
+    Mod+Ctrl+3 	{ move-column-to-workspace 3; }
+    Mod+Ctrl+4 	{ move-column-to-workspace 4; }
+    Mod+Ctrl+5 	{ move-column-to-workspace 5; }
+    Mod+Ctrl+6 	{ move-column-to-workspace 6; }
+    Mod+Ctrl+7 	{ move-column-to-workspace 7; }
+    Mod+Ctrl+8 	{ move-column-to-workspace 8; }
+    Mod+Ctrl+9 	{ move-column-to-workspace 9; }
+
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    Mod+Shift+P { quit; }
+    // Mod+Shift+P { power-off-monitors; }
+}
+
+//
+// ENVIRONMENT VARIABLES
+// https://yalter.github.io/niri/Configuration:-Miscellaneous#environment
+//
+
+environment {
+    QT_QPA_PLATFORM "wayland;xcb"
+    QT_QPA_PLATFORMTHEME "qt5ct"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+}
+
+
+//
+// LOOK AND FEEL
+// https://yalter.github.io/niri/Configuration:-Layout
+// https://yalter.github.io/niri/Configuration:-Animations
+// https://yalter.github.io/niri/Configuration:-Miscellaneous
+//
+
+layout {
+    gaps 0
+    center-focused-column "on-overflow"
+
+    default-column-width { 
+        proportion 0.5; 
+    }
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        proportion 1.0
+    }
+
+    preset-window-heights {
+        proportion 0.5
+        proportion 1.0
+    }
+
+    border {
+        on
+        width 3
+
+        active-color "#33ccff"
+        //active-gradient from="#33ccff" to="#00ff99" angle=45
+        inactive-color "#595959"
+    }
+
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
+    }
+}
+
+animations {
+    slowdown 1.0
+
+    window-open {
+        duration-ms 150
+        curve "cubic-bezier" 0.05 0.7 0.1 1
+    }
+
+    window-close {
+        duration-ms 150
+        curve "cubic-bezier" 0.3 0 0.8 0.15
+    }
+}
+
+cursor {
+    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 24
+}
+
+overview {
+    zoom 0.6
+    backdrop-color "#262626"
+
+    workspace-shadow {
+        softness 40
+        spread 10
+        offset x=0 y=10
+        color "#00000050"
+    }
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+
+//
+// WINDOW RULES
+// https://yalter.github.io/niri/Configuration:-Window-Rules
+//
+
+window-rule {
+    match app-id="^org.pulseaudio.pavucontrol$"
+    open-floating true
+    default-column-width 	{ fixed 640; }
+    default-window-height 	{ fixed 500; }
+}
+window-rule {
+    match app-id="^zen$"
+    open-maximized true
+}
+window-rule {
+    match app-id="^zen$" title="Extension: (Bitwarden Password Manager)"
+    open-floating true
+}
+window-rule {
+    match app-id="^org.telegram.desktop$"
+    open-maximized true
+}
+window-rule {
+    match app-id="^org.telegram.desktop$" title="^Media viewer$"
+    open-fullscreen false
+    open-floating true
+}
+window-rule {
+    match app-id="^$"
+    open-maximized true
+}
+window-rule {
+    match app-id="^steam$" title="^Friends List$"
+    open-floating true
+}
+window-rule {
+    match app-id="^steam$" title="^Steam Settings$"
+    open-floating true
+}
+window-rule {
+    match app-id="^steam$" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=0 y=0 relative-to="bottom-right"
+}
+window-rule {
+    match app-id="^mpv$"
+    open-floating true
+}
+window-rule {
+    match app-id="^thunar$" title=r#"Rename.*"#
+    open-floating true
+}
+window-rule {
+    match app-id="^blueman-manager$"
+    open-floating true
+    default-window-height 	{ fixed 600; }
+}
+window-rule {
+    match app-id="$xdg-desktop-portal-.*^"
+    open-floating true
+}
+window-rule {
+    match app-id="^clash-verge$"
+    open-maximized false
+}
+window-rule {
+    match app-id="^code$"
+    open-maximized true
+}
