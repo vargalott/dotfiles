@@ -11,6 +11,7 @@ waybar
 kitty
 wofi
 fuzzel
+mako
 dunst
 ```
 
