@@ -43,8 +43,8 @@ spawn-at-startup "hyprsunset"
 spawn-at-startup "dunst"
 
 // Applications
-spawn-at-startup "clash-verge"
 spawn-at-startup "zen-browser"
+spawn-at-startup "clash-verge"
 spawn-at-startup "Telegram"
 
 
@@ -59,14 +59,14 @@ input {
             layout "us,ru"
             options "grp:alt_shift_toggle"
         }
+        
+        repeat-delay 250
+        repeat-rate 50
     }
 
     mouse {
-        // off
-        // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "no-scroll"
+        accel-speed 0.25
+        accel-profile "flat"
     }
 
     focus-follows-mouse
@@ -239,7 +239,7 @@ layout {
         width 3
 
         active-color "#33ccff"
-        //active-gradient from="#33ccff" to="#00ff99" angle=45
+        // active-gradient from="#33ccff" to="#00ff99" angle=45
         inactive-color "#595959"
     }
 
@@ -295,10 +295,7 @@ gestures {
 //
 
 window-rule {
-    match app-id="^org.pulseaudio.pavucontrol$"
-    open-floating true
-    default-column-width 	{ fixed 640; }
-    default-window-height 	{ fixed 500; }
+	open-maximized false
 }
 
 window-rule {
@@ -321,11 +318,24 @@ window-rule {
 }
 
 window-rule {
+	match app-id="^org.telegram.desktop$" at-startup=true
+	open-focused false
+}
+
+window-rule {
+    match app-id="^org.pulseaudio.pavucontrol$"
+    open-floating true
+    default-column-width 	{ fixed 640; }
+    default-window-height 	{ fixed 500; }
+}
+
+window-rule {
     match app-id="^steam$" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=0 y=0 relative-to="bottom-right"
 }
 
 window-rule {
     match app-id="^clash-verge$"
+    open-maximized false
     open-maximized-to-edges false
 }
