@@ -45,7 +45,7 @@ spawn-at-startup "dunst"
 // Applications
 spawn-at-startup "zen-browser"
 spawn-at-startup "clash-verge"
-spawn-at-startup "Telegram"
+//spawn-at-startup "Telegram -startintray"
 
 
 //
@@ -61,7 +61,7 @@ input {
         }
         
         repeat-delay 250
-        repeat-rate 50
+        repeat-rate 35
     }
 
     mouse {
@@ -106,7 +106,7 @@ binds {
 
     // Screenshots
     Print				{ screenshot-screen; }
-    Mod+Print	 		{ screenshot-window; }
+    Mod+Print			{ screenshot-window; }
     Shift+Print			{ screenshot; }
 
     // Multimedia keys
@@ -120,19 +120,6 @@ binds {
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
 
     // Navigation
-    Mod+O repeat=false	{ toggle-overview; }
-    Mod+Q repeat=false	{ close-window; }
-    Mod+C 				{ center-column; }
-    Mod+Ctrl+C 			{ center-visible-columns; }
-    Mod+F 				{ fullscreen-window; }
-    Mod+V       		{ toggle-window-floating; }
-    Mod+Ctrl+V	 		{ switch-focus-between-floating-and-tiling; }
-
-    Mod+BracketLeft  	{ consume-or-expel-window-left; }
-    Mod+BracketRight 	{ consume-or-expel-window-right; }
-    Mod+Comma  			{ consume-window-into-column; }
-    Mod+Period 			{ expel-window-from-column; }
-    
     Mod+Left  			{ focus-column-left; }
     Mod+Down  			{ focus-window-down; }
     Mod+Up    			{ focus-window-up; }
@@ -142,6 +129,14 @@ binds {
     Mod+Shift+Down  	{ move-window-down; }
     Mod+Shift+Up    	{ move-window-up; }
     Mod+Shift+Right 	{ move-column-right; }
+    
+    Mod+O repeat=false	{ toggle-overview; }
+    Mod+Q repeat=false	{ close-window; }
+    Mod+C 				{ center-column; }
+    Mod+Ctrl+C 			{ center-visible-columns; }
+    Mod+F 				{ fullscreen-window; }
+    Mod+V       		{ toggle-window-floating; }
+    Mod+Ctrl+V			{ switch-focus-between-floating-and-tiling; }
 
     Mod+Home			{ focus-column-first; }
     Mod+End  			{ focus-column-last; }
@@ -154,6 +149,11 @@ binds {
     Mod+Page_Up        	{ focus-workspace-up; }
     Mod+Ctrl+Page_Down 	{ move-workspace-down; }
     Mod+Ctrl+Page_Up   	{ move-workspace-up; }
+
+    Mod+BracketLeft repeat=false  		{ consume-window-into-column; }
+    Mod+BracketRight repeat=false 		{ expel-window-from-column; }
+    Mod+Comma repeat=false  			{ consume-or-expel-window-left; }
+    Mod+Period repeat=false 			{ consume-or-expel-window-right; }
 
     // Navigation with mouse
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
@@ -251,7 +251,7 @@ layout {
     }
 }
 
-animations {
+/-animations {
     slowdown 1.0
 
     window-open {
@@ -264,6 +264,8 @@ animations {
         curve "cubic-bezier" 0.3 0 0.8 0.15
     }
 }
+
+
 
 cursor {
     xcursor-theme "Bibata-Modern-Ice"
@@ -317,7 +319,7 @@ window-rule {
     open-floating true
 }
 
-window-rule {
+/-window-rule {
 	match app-id="^org.telegram.desktop$" at-startup=true
 	open-focused false
 }
@@ -332,6 +334,12 @@ window-rule {
 window-rule {
     match app-id="^steam$" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=0 y=0 relative-to="bottom-right"
+}
+
+window-rule {
+	match app-id="^steam_app_.*$"
+	open-floating false
+	open-maximized true
 }
 
 window-rule {
