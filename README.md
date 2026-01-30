@@ -8,6 +8,7 @@ hyprpaper
 hyprlock
 hyprsunset
 waybar
+alacritty
 kitty
 wofi
 fuzzel
