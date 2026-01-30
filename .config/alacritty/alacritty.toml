@@ -1,0 +1,26 @@
+[font]
+size = 12.0
+
+[font.normal]
+family = "Iosevka Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "Iosevka Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "Iosevka Nerd Font Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "Iosevka Nerd Font Mono"
+style = "Bold Italic"
+
+[window]
+padding = { x = 12, y = 12 }
+opacity = 0.75
+
+[colors.primary]
+foreground = "#d8d8d8"
+background = "#080808"
