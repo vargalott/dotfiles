@@ -2,8 +2,8 @@
 // GLOBAL
 // https://yalter.github.io/niri/Configuration:-Miscellaneous
 //
-screenshot-path null
 prefer-no-csd
+screenshot-path null
 
 xwayland-satellite {
     path "xwayland-satellite"
@@ -45,7 +45,7 @@ spawn-at-startup "dunst"
 // Applications
 spawn-at-startup "zen-browser"
 spawn-at-startup "clash-verge"
-//spawn-at-startup "Telegram -startintray"
+// spawn-at-startup "Telegram -startintray"
 
 
 //
@@ -59,7 +59,7 @@ input {
             layout "us,ru"
             options "grp:alt_shift_toggle"
         }
-        
+
         repeat-delay 250
         repeat-rate 35
     }
@@ -69,9 +69,15 @@ input {
         accel-profile "flat"
     }
 
-    focus-follows-mouse
+    // focus-follows-mouse
     // warp-mouse-to-focus
     // workspace-auto-back-and-forth
+}
+
+gestures {
+    hot-corners {
+        off
+    }
 }
 
 
@@ -85,7 +91,7 @@ binds {
     Mod+Shift+Slash 	{ show-hotkey-overlay; }
 
     // Application bindings
-    Mod+T 				{ spawn "kitty"; }
+    Mod+T 				{ spawn "alacritty"; }
     Mod+E 				{ spawn "thunar"; }
     Mod+B 				{ spawn "zen-browser"; }
     Mod+L 				{ spawn "hyprlock"; }
@@ -98,7 +104,7 @@ binds {
     Mod+Equal 			{ set-column-width "+10%"; }
     Mod+Shift+Minus 	{ set-window-height "-10%"; }
     Mod+Shift+Equal 	{ set-window-height "+10%"; }
-        
+
     Mod+D				{ switch-preset-column-width; }
     Mod+Shift+D 		{ switch-preset-window-height; }
     Mod+Shift+F			{ maximize-column; }
@@ -106,7 +112,7 @@ binds {
 
     // Screenshots
     Print				{ screenshot-screen; }
-    Mod+Print			{ screenshot-window; }
+    Mod+Print	 		{ screenshot-window; }
     Shift+Print			{ screenshot; }
 
     // Multimedia keys
@@ -129,14 +135,14 @@ binds {
     Mod+Shift+Down  	{ move-window-down; }
     Mod+Shift+Up    	{ move-window-up; }
     Mod+Shift+Right 	{ move-column-right; }
-    
+
     Mod+O repeat=false	{ toggle-overview; }
     Mod+Q repeat=false	{ close-window; }
     Mod+C 				{ center-column; }
     Mod+Ctrl+C 			{ center-visible-columns; }
     Mod+F 				{ fullscreen-window; }
     Mod+V       		{ toggle-window-floating; }
-    Mod+Ctrl+V			{ switch-focus-between-floating-and-tiling; }
+    Mod+Ctrl+V	 		{ switch-focus-between-floating-and-tiling; }
 
     Mod+Home			{ focus-column-first; }
     Mod+End  			{ focus-column-last; }
@@ -194,6 +200,13 @@ binds {
     // Mod+Shift+P { power-off-monitors; }
 }
 
+recent-windows {
+    binds {
+        Mod+Tab         { next-window; }
+        Mod+Shift+Tab   { previous-window; }
+    }
+}
+
 //
 // ENVIRONMENT VARIABLES
 // https://yalter.github.io/niri/Configuration:-Miscellaneous#environment
@@ -218,8 +231,8 @@ layout {
     gaps 0
     center-focused-column "on-overflow"
 
-    default-column-width { 
-        proportion 0.5; 
+    default-column-width {
+        proportion 0.5;
     }
 
     preset-column-widths {
@@ -281,12 +294,6 @@ overview {
         spread 10
         offset x=0 y=10
         color "#00000050"
-    }
-}
-
-gestures {
-    hot-corners {
-        off
     }
 }
 
