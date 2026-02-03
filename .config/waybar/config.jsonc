@@ -1,14 +1,19 @@
 {
+  "height": 38,
   "layer": "top",
   "position": "top",
 
+  // compositor-specific modules may coexist in the config;
+  // waybar attempts to initialize all listed modules unconditionally;
+  // unsupported modules (e.g. hyprland/* on Niri or niri/* on Hyprland)
+  // simply fail to initialize and are skipped without affecting the bar
   "modules-left": [
     "custom/logo",
-    // "hyprland/workspaces",
+    "hyprland/workspaces",
     "niri/workspaces",  ],
 
   "modules-center": [
-    // "hyprland/window",
+    "hyprland/window",
     "niri/window",
   ],
   "modules-right": [
@@ -17,15 +22,14 @@
     "wireplumber#icon",
     "wireplumber#value",
     "clock",
-    // "hyprland/language",
+    "hyprland/language",
     "niri/language",
     "custom/power",
   ],
 
   "custom/logo": {
     "format": "\udb80\ude38",
-    // "on-click": "~/.config/wofi/menu.sh",
-    "on-click": "~/.config/fuzzel/menu.sh",
+    "on-click": "$HOME/.config/waybar/menu.sh",
     "tooltip-format": "Applications",
   },
 
@@ -130,8 +134,7 @@
 
   "custom/power": {
     "format": "\uf011",
-    // "on-click": "~/.config/wofi/powermenu.sh",
-    "on-click": "~/.config/fuzzel/powermenu.sh",
+    "on-click": "$HOME/.config/waybar/powermenu.sh",
     "tooltip-format": "Power Menu",
   },
 }
