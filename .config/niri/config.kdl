@@ -38,14 +38,15 @@ output "HDMI-A-1" {
 spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" // possible apps long launch fix
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1" // polkit-gnome
 spawn-sh-at-startup "~/.config/waybar/run.sh"
+spawn-sh-at-startup "thunar --daemon"
 spawn-at-startup "hyprpaper"
 spawn-at-startup "hyprsunset"
 spawn-at-startup "dunst"
 
 // Applications
-spawn-at-startup "zen-browser"
 spawn-at-startup "clash-verge"
-// spawn-at-startup "Telegram -startintray"
+spawn-at-startup "zen-browser"
+spawn-sh-at-startup "sleep 2 && Telegram"
 
 
 //
@@ -213,7 +214,6 @@ recent-windows {
 //
 
 environment {
-	GIO_USE_VFS 							"local"
 	GDK_BACKEND 							"wayland,x11,*"
     QT_QPA_PLATFORM 						"wayland;xcb"
     QT_QPA_PLATFORMTHEME 					"qt5ct"
@@ -328,7 +328,7 @@ window-rule {
     open-floating true
 }
 
-/-window-rule {
+window-rule {
 	match app-id="^org.telegram.desktop$" at-startup=true
 	open-focused false
 }
