@@ -60,7 +60,7 @@ input {
             layout "us,ru"
             options "grp:alt_shift_toggle"
         }
-
+        
         repeat-delay 250
         repeat-rate 35
     }
@@ -105,7 +105,7 @@ binds {
     Mod+Equal 			{ set-column-width "+10%"; }
     Mod+Shift+Minus 	{ set-window-height "-10%"; }
     Mod+Shift+Equal 	{ set-window-height "+10%"; }
-
+        
     Mod+D				{ switch-preset-column-width; }
     Mod+Shift+D 		{ switch-preset-window-height; }
     Mod+Shift+F			{ maximize-column; }
@@ -136,7 +136,7 @@ binds {
     Mod+Shift+Down  	{ move-window-down; }
     Mod+Shift+Up    	{ move-window-up; }
     Mod+Shift+Right 	{ move-column-right; }
-
+    
     Mod+O repeat=false	{ toggle-overview; }
     Mod+Q repeat=false	{ close-window; }
     Mod+C 				{ center-column; }
@@ -233,8 +233,8 @@ layout {
     gaps 0
     center-focused-column "on-overflow"
 
-    default-column-width {
-        proportion 0.5;
+    default-column-width { 
+        proportion 0.5; 
     }
 
     preset-column-widths {
@@ -251,11 +251,16 @@ layout {
 
     border {
         on
-        width 3
+        width 4
 
-        active-color "#33ccff"
-        // active-gradient from="#33ccff" to="#00ff99" angle=45
+		// active-color "#33ccff"
+        // active-gradient from="#33ccff" to="#00ff99" angle=45 relative-to="workspace-view"
+        active-gradient from="#ffdd00" to="#ff2200" angle=45
         inactive-color "#595959"
+    }
+
+    focus-ring {
+    	off
     }
 
     struts {
@@ -266,7 +271,7 @@ layout {
     }
 }
 
-/-animations {
+animations {
     slowdown 1.0
 
     window-open {
