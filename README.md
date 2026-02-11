@@ -1,8 +1,14 @@
-## dotfiles 
+## dotfiles
 
+```sh
+git clone https://github.com/vargalott/dotfiles.git ~
+cd ~/dotfiles
+stow -v .
 ```
-hyprland
+
+```sh
 niri
+hyprland
 
 hyprpaper
 hyprlock
@@ -15,4 +21,3 @@ fuzzel
 mako
 dunst
 ```
-
