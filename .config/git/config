@@ -1,12 +1,25 @@
 [user]
 name = Mykola Symon
 email = vargalott@gmail.com
+signingkey = /home/v/.ssh/bitwarden.pub
+
+[gpg]
+format = ssh
+
+[gpg "ssh"]
+allowedSignersFile = ~/.config/git/allowed-signers
+
+[commit]
+gpgsign = true
+
+[tag]
+gpgSign = true
+
+[init]
+defaultBranch = main
 
 [core]
 editor = code --wait
 
 [pull]
 ff = only
-
-[init]
-defaultBranch = main
