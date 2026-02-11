@@ -60,7 +60,7 @@ input {
             layout "us,ru"
             options "grp:alt_shift_toggle"
         }
-        
+
         repeat-delay 250
         repeat-rate 35
     }
@@ -105,7 +105,7 @@ binds {
     Mod+Equal 			{ set-column-width "+10%"; }
     Mod+Shift+Minus 	{ set-window-height "-10%"; }
     Mod+Shift+Equal 	{ set-window-height "+10%"; }
-        
+
     Mod+D				{ switch-preset-column-width; }
     Mod+Shift+D 		{ switch-preset-window-height; }
     Mod+Shift+F			{ maximize-column; }
@@ -136,7 +136,7 @@ binds {
     Mod+Shift+Down  	{ move-window-down; }
     Mod+Shift+Up    	{ move-window-up; }
     Mod+Shift+Right 	{ move-column-right; }
-    
+
     Mod+O repeat=false	{ toggle-overview; }
     Mod+Q repeat=false	{ close-window; }
     Mod+C 				{ center-column; }
@@ -233,8 +233,8 @@ layout {
     gaps 0
     center-focused-column "on-overflow"
 
-    default-column-width { 
-        proportion 0.5; 
+    default-column-width {
+        proportion 0.5;
     }
 
     preset-column-widths {
