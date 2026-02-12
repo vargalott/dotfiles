@@ -1,4 +1,5 @@
 export LC_ALL=en_US.UTF-8
+export TERM=xterm-256color
 
 # History
 setopt EXTENDED_HISTORY
@@ -19,7 +20,7 @@ bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 
 # Aliases
-alias ll="ls -alF --group-directories-first"
+alias ll="ls -alvF --group-directories-first"
 alias ducks="du -hs * | sort -hr"
 alias reload="source ~/.zshrc"
 
