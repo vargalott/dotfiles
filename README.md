@@ -2,12 +2,14 @@
 
 <img src=".github/desktop.png"/>
 
+###
 ```sh
 git clone https://github.com/vargalott/dotfiles.git ~
 cd ~/dotfiles
 stow -v .
 ```
 
+###
 ```sh
 niri
 hyprland
