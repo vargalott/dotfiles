@@ -292,7 +292,7 @@ cursor {
 
 overview {
     zoom 0.6
-    backdrop-color "#3c3836" // gruvbox:dark-mode(bg1)
+    backdrop-color "#1d2021" // gruvbox:dark-mode(bg0_h)
 
     workspace-shadow {
         spread 0
@@ -326,6 +326,7 @@ window-rule {
     match app-id="^org.telegram.desktop$" title="^Media viewer$"
     match app-id="^steam$" title="^Friends List$"
     match app-id="^steam$" title="^Steam Settings$"
+    match app-id="^Alacritty$" title="^wiremix$"
     open-floating true
 }
 
