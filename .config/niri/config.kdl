@@ -321,6 +321,7 @@ window-rule {
     match app-id="$xdg-desktop-portal-.*^"
     match app-id="^mpv$"
     match app-id="^thunar$" title=r#"Rename.*"#
+    match app-id="^thunar$" title=r#"File Operation Progress"#
     match app-id="^blueman-manager$"
     match app-id="^org.telegram.desktop$" title="^Media viewer$"
     match app-id="^steam$" title="^Friends List$"
