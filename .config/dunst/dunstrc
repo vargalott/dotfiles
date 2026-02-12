@@ -33,13 +33,13 @@ per_monitor_dpi = false
 timeout = 2
 background = "#282828"      # gruvbox:dark-mode(bg)
 foreground = "#ebdbb2"      # gruvbox:dark-mode(fg)
-frame_color = "#b8bb26"     # gruvbox:dark-mode(bg)
+frame_color = "#d65d0e"     # gruvbox:dark-mode(orange)
 
 [urgency_normal]
 timeout = 4
 background = "#282828"      # gruvbox:dark-mode(bg)
 foreground = "#ebdbb2"      # gruvbox:dark-mode(fg)
-frame_color = "#b8bb26"     # gruvbox:dark-mode(bg)
+frame_color = "#d65d0e"     # gruvbox:dark-mode(orange)
 
 [urgency_critical]
 timeout = 0
