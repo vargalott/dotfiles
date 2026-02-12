@@ -10,7 +10,7 @@ markup = full
 width = 350
 height = 400
 corner_radius = 8
-frame_width = 0
+frame_width = 3
 gap_size = 10
 offset = 10x10
 notification_limit = 4
@@ -31,18 +31,18 @@ per_monitor_dpi = false
 
 [urgency_low]
 timeout = 2
-background = "#161616"
-foreground = "#eeeeee"
-frame_color = "#161616"
+background = "#282828"      # gruvbox:dark-mode(bg)
+foreground = "#ebdbb2"      # gruvbox:dark-mode(fg)
+frame_color = "#b8bb26"     # gruvbox:dark-mode(bg)
 
 [urgency_normal]
 timeout = 4
-background = "#161616"
-foreground = "#eeeeee"
-frame_color = "#161616"
+background = "#282828"      # gruvbox:dark-mode(bg)
+foreground = "#ebdbb2"      # gruvbox:dark-mode(fg)
+frame_color = "#b8bb26"     # gruvbox:dark-mode(bg)
 
 [urgency_critical]
 timeout = 0
-background = "#161616"
-foreground = "#eeeeee"
-frame_color = "#ff0000"
+background = "#282828"      # gruvbox:dark-mode(bg)
+foreground = "#ebdbb2"      # gruvbox:dark-mode(fg)
+frame_color = "#fb4934"     # gruvbox:dark-mode(red)
