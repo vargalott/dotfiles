@@ -20,7 +20,9 @@ bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 
 # Aliases
-alias ll="ls -alvF --group-directories-first"
+alias ls="eza --color always --icons always --time-style long-iso --git --modified"
+alias lt="ls --tree"
+alias ll="ls -aal --group-directories-first"
 alias ducks="du -hs * | sort -hr"
 alias reload="source ~/.zshrc"
 
