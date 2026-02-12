@@ -1,17 +1,21 @@
+@define-color background #282828;   /* gruvbox:dark-mode(bg0) */
+@define-color foreground #ebdbb2;   /* gruvbox:dark-mode(fg) */
+@define-color accent #d65d0e;       /* gruvbox:dark-mode(orange) */
+
 * {
     font-family: "Iosevka Nerd Font";
     font-weight: bold;
     font-size: 16px;
     border: 0;
-    border-radius: 0px;
+    border-radius: 0;
     padding: 0;
-    margin: 1px;
-    min-height: 28px;
+    margin: 0;
+    min-width: 0;
 }
 
 #waybar {
-    color: #eeeeee;
-    background-color: #000000;
+    color: @foreground;
+    background-color: @background;
 }
 
 #custom-logo {
@@ -21,24 +25,26 @@
 }
 
 #custom-logo:hover {
-    color: #929292;
+    color: @accent;
     transition: 0.1s ease-in;
 }
 
 #workspaces button {
-    border-radius: 10px;
-    padding: 0 7px;
-    font-size: 100px;
+    color: @foreground;
+    background: transparent;
+    padding: 0 12px;
 }
 
 #workspaces button:hover {
-    color: #929292;
-    transition: 0.1s ease-in;
+    color: @accent;
     background: transparent;
+    transition: 0.1s ease-in;
 }
 
 #workspaces button.active:hover {
-    color: #eeeeee;
+    color: @accent;
+    background: transparent;
+    transition: 0.1s ease-in;
 }
 
 #window,
@@ -65,7 +71,7 @@
 }
 
 #custom-power:hover {
-    color: #929292;
+    color: @accent;
     transition: 0.1s ease-in;
     background: transparent;
 }

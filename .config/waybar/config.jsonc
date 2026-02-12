@@ -95,24 +95,24 @@
     "clock": {
         "format": "{:%H:%M:%S | %Y-%m-%d}",
         "interval": 1,
-        "tooltip": true,
-        "tooltip-format": "<tt>{calendar}</tt>",
-        "actions": {
-            "on-scroll-up": "shift_down",
-            "on-scroll-down": "shift_up",
-        },
-        "calendar": {
-            "mode": "month",
-            "weeks-pos": "right",
-            "on-scroll": 1,
-            "format": {
-                "months": "<span color='#eebb22'><b>{}</b></span>",
-                "days": "<span color='#929292'><b>{}</b></span>",
-                "weeks": "<span color='#424242'><b>{:%V}</b></span>",
-                "weekdays": "<span color='#ee8822'><b>{}</b></span>",
-                "today": "<span color='#ff2222'><b><u>{}</u></b></span>"
-            }
-        }
+        // "tooltip": true,
+        // "tooltip-format": "<tt>{calendar}</tt>",
+        // "actions": {
+        //     "on-scroll-up": "shift_down",
+        //     "on-scroll-down": "shift_up",
+        // },
+        // "calendar": {
+        //     "mode": "month",
+        //     "weeks-pos": "right",
+        //     "on-scroll": 1,
+        //     "format": {
+        //         "months": "<span color='#d65d0e'><b>{}</b></span>",         // gruvbox:dark-mode(orange)
+        //         "days": "<span color='#bdae93'><b>{}</b></span>",           // gruvbox:dark-mode(fg3)
+        //         "weeks": "<span color='#fabd2f'><b>{:%V}</b></span>",       // gruvbox:dark-mode(yellow)
+        //         "weekdays": "<span color='#fabd2f'><b>{}</b></span>",       // gruvbox:dark-mode(yellow)
+        //         "today": "<span color='#fb4934'><b><u>{}</u></b></span>"    // gruvbox:dark-mode(red)
+        //     }
+        // }
     },
     "hyprland/language": {
         "format": "{short}",
