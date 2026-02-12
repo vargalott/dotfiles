@@ -28,7 +28,7 @@
     ],
 
     "custom/logo": {
-        "format": "\udb80\ude38",
+        "format": "\ue3bf",
         "on-click": "$HOME/.config/waybar/menu.sh",
         "tooltip-format": "Applications",
     },
@@ -90,7 +90,7 @@
         "format-muted": "0%",
         "max-volume": 100,
         "scroll-step": 2,
-        "on-click": "pavucontrol",
+        "on-click": "alacritty -T wiremix -e wiremix --mouse -v output",
     },
     "clock": {
         "format": "{:%H:%M:%S | %Y-%m-%d}",
