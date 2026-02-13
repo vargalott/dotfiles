@@ -5,4 +5,5 @@ LICENSE
 
 .editorconfig
 greetd.config.toml
-gruvbox.tdesktop-palette
+gruvbox-colors.tdesktop-theme
+gruvbox.tdesktop-theme
