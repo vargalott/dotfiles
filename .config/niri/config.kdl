@@ -46,7 +46,7 @@ spawn-at-startup "dunst"
 // Applications
 spawn-at-startup "clash-verge"
 spawn-at-startup "zen-browser"
-spawn-sh-at-startup "sleep 2 && Telegram"
+spawn-sh-at-startup "sleep 3 && Telegram"
 
 
 //
