@@ -4,7 +4,6 @@
 @define-color accent-2 #cc241d;         /* gruvbox:dark-mode(red) */
 
 * {
-    all: unset;
     border: 0;
     border-radius: 0;
     margin: 0;
@@ -33,6 +32,7 @@
 }
 
 #workspaces button {
+    all: unset;
     color: @foreground;
     background-color: @background;
     padding: 0 12px;
