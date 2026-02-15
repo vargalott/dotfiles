@@ -31,110 +31,110 @@
 name: gruvbox
 shortname: <id>
 wallpaper: t.me/bg/xcXUyrwR7FEBAAAAheKXbG3OvXs
-windowBg: #282828 // gruvbox bg0
-windowFg: #EBDBB2 // gruvbox fg1
-windowBgOver: #3C3836 // gruvbox bg1
-windowBgRipple: #504945 // gruvbox bg2
+windowBg: #282828 // bg0
+windowFg: #EBDBB2 // fg1
+windowBgOver: #3C3836 // bg1
+windowBgRipple: #504945 // bg2
 windowFgOver: windowFg
-windowSubTextFg: #A89984 // gruvbox fg4
-windowSubTextFgOver: #BDAE93 // gruvbox fg3
-windowBoldFg: #FBF1C7 // gruvbox fg0
-windowBoldFgOver: #FBF1C7
-windowBgActive: #458588 // gruvbox blue
-windowFgActive: #FBF1C7 // gruvbox fg0
-windowActiveTextFg: #83A598 // gruvbox bright blue
-windowShadowFg: #1D2021 // gruvbox bg0_h
-windowShadowFgFallback: #3C3836
-shadowFg: #1D202140
-slideFadeOutBg: #1D20213C
+windowSubTextFg: #A89984 // fg4
+windowSubTextFgOver: #BDAE93 // fg3
+windowBoldFg: #FBF1C7 // fg0
+windowBoldFgOver: #FBF1C7 // fg0
+windowBgActive: #458588 // blue
+windowFgActive: #FBF1C7 // fg0
+windowActiveTextFg: #83A598 // bright blue
+windowShadowFg: #1D2021 // bg0_h
+windowShadowFgFallback: #3C3836 // bg1
+shadowFg: #1D202140 // bg0_h with transparency
+slideFadeOutBg: #1D20213C // bg0_h with transparency
 slideFadeOutShadowFg: windowShadowFg
-imageBg: #1D2021
-imageBgTransparent: #282828
+imageBg: #1D2021 // bg0_h
+imageBgTransparent: #282828 // bg0
 activeButtonBg: windowBgActive
-activeButtonBgOver: #3C7A93
-activeButtonBgRipple: #2F6478
+activeButtonBgOver: #3C7A93 // blue (darker)
+activeButtonBgRipple: #2F6478 // blue (even darker)
 activeButtonFg: windowFgActive
 activeButtonFgOver: activeButtonFg
-activeButtonSecondaryFg: #A4C3D2
+activeButtonSecondaryFg: #A4C3D2 // blue (lighter)
 activeButtonSecondaryFgOver: activeButtonSecondaryFg
-activeLineFg: #83A598
-activeLineFgError: #FB4934
+activeLineFg: #83A598 // bright blue
+activeLineFgError: #FB4934 // bright red
 lightButtonBg: windowBg
-lightButtonBgOver: #3C3836
-lightButtonBgRipple: #504945
+lightButtonBgOver: #3C3836 // bg1
+lightButtonBgRipple: #504945 // bg2
 lightButtonFg: windowActiveTextFg
 lightButtonFgOver: lightButtonFg
-attentionButtonFg: #FB4934
-attentionButtonFgOver: #FB4934
-attentionButtonBgOver: #5C2929
-attentionButtonBgRipple: #4A2121
-menuBg: #282828
-menuBgOver: #3C3836
-menuBgRipple: #504945
-menuIconFg: #A89984
-menuIconFgOver: #BDAE93
-menuSubmenuArrowFg: #D5C4A1
-menuFgDisabled: #665C54
-menuSeparatorFg: #3C3836
-scrollBarBg: #50494580
-scrollBarBgOver: #665C54A0
-scrollBg: #3C383640
-scrollBgOver: #50494560
-smallCloseIconFg: #A89984
-smallCloseIconFgOver: #BDAE93
+attentionButtonFg: #FB4934 // bright red
+attentionButtonFgOver: #FB4934 // bright red
+attentionButtonBgOver: #5C2929 // red (darker)
+attentionButtonBgRipple: #4A2121 // red (even darker)
+menuBg: #282828 // bg0
+menuBgOver: #3C3836 // bg1
+menuBgRipple: #504945 // bg2
+menuIconFg: #A89984 // fg4
+menuIconFgOver: #BDAE93 // fg3
+menuSubmenuArrowFg: #D5C4A1 // fg2
+menuFgDisabled: #665C54 // bg3
+menuSeparatorFg: #3C3836 // bg1
+scrollBarBg: #50494580 // bg2 with transparency
+scrollBarBgOver: #665C54A0 // bg3 with transparency
+scrollBg: #3C383640 // bg1 with transparency
+scrollBgOver: #50494560 // bg2 with transparency
+smallCloseIconFg: #A89984 // fg4
+smallCloseIconFgOver: #BDAE93 // fg3
 radialFg: windowFgActive
-radialBg: #1D202180
+radialBg: #1D202180 // bg0_h with transparency
 placeholderFg: windowSubTextFg
-placeholderFgActive: #928374
-inputBorderFg: #504945
-filterInputBorderFg: #83A598
+placeholderFgActive: #928374 // gray
+inputBorderFg: #504945 // bg2
+filterInputBorderFg: #83A598 // bright blue
 filterInputActiveBg: windowBg
 filterInputInactiveBg: windowBgOver
-checkboxFg: #7C6F64
+checkboxFg: #7C6F64 // bg4
 botKbBg: menuBgOver
 botKbDownBg: menuBgRipple
 botKbColor: windowBoldFgOver
-sliderBgInactive: #504945
+sliderBgInactive: #504945 // bg2
 sliderBgActive: windowBgActive
-tooltipBg: #3C3836
-tooltipFg: #EBDBB2
-tooltipBorderFg: #504945
-titleShadow: #1D202110
-titleBg: #3C3836
+tooltipBg: #3C3836 // bg1
+tooltipFg: #EBDBB2 // fg1
+tooltipBorderFg: #504945 // bg2
+titleShadow: #1D202110 // bg0_h with transparency
+titleBg: #3C3836 // bg1
 titleBgActive: titleBg
 titleButtonBg: titleBg
-titleButtonFg: #A89984
-titleButtonBgOver: #504945
-titleButtonFgOver: #BDAE93
+titleButtonFg: #A89984 // fg4
+titleButtonBgOver: #504945 // bg2
+titleButtonFgOver: #BDAE93 // fg3
 titleButtonBgActive: titleButtonBg
 titleButtonFgActive: titleButtonFg
 titleButtonBgActiveOver: titleButtonBgOver
 titleButtonFgActiveOver: titleButtonFgOver
 titleButtonCloseBg: titleButtonBg
 titleButtonCloseFg: titleButtonFg
-titleButtonCloseBgOver: #CC241D
+titleButtonCloseBgOver: #CC241D // red
 titleButtonCloseFgOver: windowFgActive
 titleButtonCloseBgActive: titleButtonCloseBg
 titleButtonCloseFgActive: titleButtonCloseFg
 titleButtonCloseBgActiveOver: titleButtonCloseBgOver
 titleButtonCloseFgActiveOver: titleButtonCloseFgOver
-titleFg: #A89984
-titleFgActive: #D5C4A1
-trayCounterBg: #CC241D
-trayCounterBgMute: #7C6F64
-trayCounterFg: #FBF1C7
-trayCounterBgMacInvert: #FBF1C7
-trayCounterFgMacInvert: #FBF1C701
-layerBg: #1D2021B0
+titleFg: #A89984 // fg4
+titleFgActive: #D5C4A1 // fg2
+trayCounterBg: #CC241D // red
+trayCounterBgMute: #7C6F64 // bg4
+trayCounterFg: #FBF1C7 // fg0
+trayCounterBgMacInvert: #FBF1C7 // fg0
+trayCounterFgMacInvert: #FBF1C701 // fg0 with transparency
+layerBg: #1D2021B0 // bg0_h with transparency
 cancelIconFg: menuIconFg
 cancelIconFgOver: menuIconFgOver
 boxBg: windowBg
 boxTextFg: windowFg
-boxTextFgGood: #B8BB26
-boxTextFgError: #FB4934
-boxTitleFg: #FBF1C7
+boxTextFgGood: #B8BB26 // bright green
+boxTextFgError: #FB4934 // bright red
+boxTitleFg: #FBF1C7 // fg0
 boxSearchBg: boxBg
-boxTitleAdditionalFg: #A89984
+boxTitleAdditionalFg: #A89984 // fg4
 boxTitleCloseFg: cancelIconFg
 boxTitleCloseFgOver: cancelIconFgOver
 membersAboutLimitFg: windowSubTextFgOver
@@ -145,20 +145,20 @@ contactsStatusFg: windowSubTextFg
 contactsStatusFgOver: windowSubTextFgOver
 contactsStatusFgOnline: windowActiveTextFg
 photoCropFadeBg: layerBg
-photoCropPointFg: #FBF1C7B0
-callArrowFg: #B8BB26
-callArrowMissedFg: #FB4934
+photoCropPointFg: #FBF1C7B0 // fg0 with transparency
+callArrowFg: #B8BB26 // bright green
+callArrowMissedFg: #FB4934 // bright red
 introBg: windowBg
 introTitleFg: windowBoldFg
 introDescriptionFg: windowSubTextFg
 introErrorFg: windowSubTextFg
-introCoverTopBg: #458588
-introCoverBottomBg: #83A598
-introCoverIconsFg: #A4C3D2
-introCoverPlaneTrace: #A4C3D280
-introCoverPlaneInner: #D5C4A1
-introCoverPlaneOuter: #BDAE93
-introCoverPlaneTop: #FBF1C7
+introCoverTopBg: #458588 // blue
+introCoverBottomBg: #83A598 // bright blue
+introCoverIconsFg: #A4C3D2 // blue (lighter)
+introCoverPlaneTrace: #A4C3D280 // blue (lighter) with transparency
+introCoverPlaneInner: #D5C4A1 // fg2
+introCoverPlaneOuter: #BDAE93 // fg3
+introCoverPlaneTop: #FBF1C7 // fg0
 dialogsMenuIconFg: menuIconFg
 dialogsMenuIconFgOver: menuIconFgOver
 dialogsBg: windowBg
@@ -167,16 +167,16 @@ dialogsChatIconFg: dialogsNameFg
 dialogsDateFg: windowSubTextFg
 dialogsTextFg: windowSubTextFg
 dialogsTextFgService: windowActiveTextFg
-dialogsDraftFg: #FB4934
+dialogsDraftFg: #FB4934 // bright red
 dialogsVerifiedIconBg: windowBgActive
 dialogsVerifiedIconFg: windowFgActive
-dialogsSendingIconFg: #928374
-dialogsSentIconFg: #B8BB26
+dialogsSendingIconFg: #928374 // gray
+dialogsSentIconFg: #B8BB26 // bright green
 dialogsUnreadBg: windowBgActive
-dialogsUnreadBgMuted: #7C6F64
+dialogsUnreadBgMuted: #7C6F64 // bg4
 dialogsUnreadFg: windowFgActive
-dialogsArchiveFg: #A89984
-dialogsOnlineBadgeFg: #B8BB26
+dialogsArchiveFg: #A89984 // fg4
+dialogsOnlineBadgeFg: #B8BB26 // bright green
 dialogsScamFg: dialogsDraftFg
 dialogsBgOver: windowBgOver
 dialogsNameFgOver: windowBoldFgOver
@@ -192,40 +192,40 @@ dialogsSentIconFgOver: dialogsSentIconFg
 dialogsUnreadBgOver: dialogsUnreadBg
 dialogsUnreadBgMutedOver: dialogsUnreadBgMuted
 dialogsUnreadFgOver: dialogsUnreadFg
-dialogsArchiveFgOver: #A89984
+dialogsArchiveFgOver: #A89984 // fg4
 dialogsScamFgOver: dialogsDraftFgOver
-dialogsBgActive: #458588
+dialogsBgActive: #458588 // blue
 dialogsNameFgActive: windowFgActive
 dialogsChatIconFgActive: dialogsNameFgActive
 dialogsDateFgActive: windowFgActive
 dialogsTextFgActive: windowFgActive
 dialogsTextFgServiceActive: dialogsTextFgActive
-dialogsDraftFgActive: #D4B5B4
+dialogsDraftFgActive: #D4B5B4 // light pink
 dialogsVerifiedIconBgActive: dialogsTextFgActive
 dialogsVerifiedIconFgActive: dialogsBgActive
-dialogsSendingIconFgActive: #FBF1C7C0
+dialogsSendingIconFgActive: #FBF1C7C0 // fg0 with transparency
 dialogsSentIconFgActive: dialogsTextFgActive
 dialogsUnreadBgActive: dialogsTextFgActive
 dialogsUnreadBgMutedActive: dialogsDraftFgActive
 dialogsUnreadFgActive: dialogsBgActive
-dialogsOnlineBadgeFgActive: #FBF1C7
+dialogsOnlineBadgeFgActive: #FBF1C7 // fg0
 dialogsScamFgActive: dialogsDraftFgActive
 dialogsRippleBg: windowBgRipple
-dialogsRippleBgActive: #3C7A93
+dialogsRippleBgActive: #3C7A93 // blue (darker)
 dialogsForwardBg: dialogsBgActive
 dialogsForwardFg: dialogsNameFgActive
 searchedBarBg: windowBgOver
 searchedBarFg: windowSubTextFgOver
 topBarBg: windowBg
 emojiPanBg: windowBg
-emojiPanCategories: #3C3836
+emojiPanCategories: #3C3836 // bg1
 emojiPanHeaderFg: windowSubTextFg
-emojiPanHeaderBg: #282828F2
+emojiPanHeaderBg: #282828F2 // bg0 with transparency
 emojiIconFg: checkboxFg
 emojiIconFgActive: windowBgActive
-stickerPanDeleteBg: #1D2021
+stickerPanDeleteBg: #1D2021 // bg0_h
 stickerPanDeleteFg: windowFgActive
-stickerPreviewBg: #282828D0
+stickerPreviewBg: #282828D0 // bg0 with transparency
 historyTextInFg: windowFg
 historyTextInFgSelected: historyTextInFg
 historyTextOutFg: windowFg
@@ -238,114 +238,114 @@ historyFileNameInFg: historyTextInFg
 historyFileNameInFgSelected: historyFileNameInFg
 historyFileNameOutFg: historyTextOutFg
 historyFileNameOutFgSelected: historyFileNameOutFg
-historyOutIconFg: #B8BB26
-historyOutIconFgSelected: #8EC07C
+historyOutIconFg: #B8BB26 // bright green
+historyOutIconFgSelected: #8EC07C // bright aqua
 historyIconFgInverted: windowFgActive
-historySendingOutIconFg: #B8BB26A0
-historySendingInIconFg: #928374
-historySendingInvertedIconFg: #FBF1C7D0
+historySendingOutIconFg: #B8BB26A0 // bright green with transparency
+historySendingInIconFg: #928374 // gray
+historySendingInvertedIconFg: #FBF1C7D0 // fg0 with transparency
 historyCallArrowInFg: callArrowFg
 historyCallArrowInFgSelected: callArrowFg
 historyCallArrowMissedInFg: callArrowMissedFg
 historyCallArrowMissedInFgSelected: callArrowMissedFg
 historyCallArrowOutFg: historyCallArrowInFg
 historyCallArrowOutFgSelected: historyCallArrowInFgSelected
-historyUnreadBarBg: #3C3836
+historyUnreadBarBg: #3C3836 // bg1
 historyUnreadBarBorder: shadowFg
-historyUnreadBarFg: #83A598
-historyForwardChooseBg: #1D20218C
+historyUnreadBarFg: #83A598 // bright blue
+historyForwardChooseBg: #1D20218C // bg0_h with transparency
 historyForwardChooseFg: windowFgActive
-historyPeer1NameFg: #FB4934
+historyPeer1NameFg: #FB4934 // bright red
 historyPeer1NameFgSelected: historyPeer1NameFg
-historyPeer1UserpicBg: #CC241D
-historyPeer2NameFg: #B8BB26
+historyPeer1UserpicBg: #CC241D // red
+historyPeer2NameFg: #B8BB26 // bright green
 historyPeer2NameFgSelected: historyPeer2NameFg
-historyPeer2UserpicBg: #98971A
-historyPeer3NameFg: #FABD2F
+historyPeer2UserpicBg: #98971A // green
+historyPeer3NameFg: #FABD2F // bright yellow
 historyPeer3NameFgSelected: historyPeer3NameFg
-historyPeer3UserpicBg: #D79921
-historyPeer4NameFg: #83A598
+historyPeer3UserpicBg: #D79921 // yellow
+historyPeer4NameFg: #83A598 // bright blue
 historyPeer4NameFgSelected: historyPeer4NameFg
-historyPeer4UserpicBg: #458588
-historyPeer5NameFg: #D3869B
+historyPeer4UserpicBg: #458588 // blue
+historyPeer5NameFg: #D3869B // bright purple
 historyPeer5NameFgSelected: historyPeer5NameFg
-historyPeer5UserpicBg: #B16286
-historyPeer6NameFg: #FB4934
+historyPeer5UserpicBg: #B16286 // purple
+historyPeer6NameFg: #FB4934 // bright red
 historyPeer6NameFgSelected: historyPeer6NameFg
-historyPeer6UserpicBg: #CC241D
-historyPeer7NameFg: #8EC07C
+historyPeer6UserpicBg: #CC241D // red
+historyPeer7NameFg: #8EC07C // bright aqua
 historyPeer7NameFgSelected: historyPeer7NameFg
-historyPeer7UserpicBg: #689D6A
-historyPeer8NameFg: #FE8019
+historyPeer7UserpicBg: #689D6A // aqua
+historyPeer8NameFg: #FE8019 // bright orange
 historyPeer8NameFgSelected: historyPeer8NameFg
-historyPeer8UserpicBg: #D65D0E
+historyPeer8UserpicBg: #D65D0E // orange
 historyPeerUserpicFg: windowFgActive
 historyPeerSavedMessagesBg: historyPeer4UserpicBg
 historyPeerArchiveUserpicBg: dialogsUnreadBgMuted
-historyScrollBarBg: #50494580
-historyScrollBarBgOver: #665C54B0
-historyScrollBg: #3C383650
-historyScrollBgOver: #50494570
-msgInBg: #3C3836
-msgInBgSelected: #504945
-msgOutBg: #32302F
-msgOutBgSelected: #45403D
-msgSelectOverlay: #45858860
-msgStickerOverlay: #458588A0
+historyScrollBarBg: #50494580 // bg2 with transparency
+historyScrollBarBgOver: #665C54B0 // bg3 with transparency
+historyScrollBg: #3C383650 // bg1 with transparency
+historyScrollBgOver: #50494570 // bg2 with transparency
+msgInBg: #3C3836 // bg1
+msgInBgSelected: #504945 // bg2
+msgOutBg: #32302F // bg0_s (slightly darker than bg0)
+msgOutBgSelected: #45403D // bg1 variant
+msgSelectOverlay: #45858860 // blue with transparency
+msgStickerOverlay: #458588A0 // blue with transparency
 msgInServiceFg: windowActiveTextFg
 msgInServiceFgSelected: windowActiveTextFg
-msgOutServiceFg: #B8BB26
-msgOutServiceFgSelected: #8EC07C
-msgInShadow: #1D202140
-msgInShadowSelected: #1D202150
-msgOutShadow: #1D202140
-msgOutShadowSelected: #1D202150
-msgInDateFg: #A89984
-msgInDateFgSelected: #BDAE93
-msgOutDateFg: #A89984
-msgOutDateFgSelected: #BDAE93
+msgOutServiceFg: #B8BB26 // bright green
+msgOutServiceFgSelected: #8EC07C // bright aqua
+msgInShadow: #1D202140 // bg0_h with transparency
+msgInShadowSelected: #1D202150 // bg0_h with transparency
+msgOutShadow: #1D202140 // bg0_h with transparency
+msgOutShadowSelected: #1D202150 // bg0_h with transparency
+msgInDateFg: #A89984 // fg4
+msgInDateFgSelected: #BDAE93 // fg3
+msgOutDateFg: #A89984 // fg4
+msgOutDateFgSelected: #BDAE93 // fg3
 msgServiceFg: windowFgActive
-msgServiceBg: #50494590
-msgServiceBgSelected: #665C54B0
+msgServiceBg: #50494590 // bg2 with transparency
+msgServiceBgSelected: #665C54B0 // bg3 with transparency
 msgInReplyBarColor: activeLineFg
 msgInReplyBarSelColor: activeLineFg
-msgOutReplyBarColor: #B8BB26
-msgOutReplyBarSelColor: #8EC07C
+msgOutReplyBarColor: #B8BB26 // bright green
+msgOutReplyBarSelColor: #8EC07C // bright aqua
 msgImgReplyBarColor: msgServiceFg
-msgInMonoFg: #83A598
-msgOutMonoFg: #B8BB26
+msgInMonoFg: #83A598 // bright blue
+msgOutMonoFg: #B8BB26 // bright green
 msgInMonoFgSelected: msgInMonoFg
 msgOutMonoFgSelected: msgOutMonoFg
 msgDateImgFg: msgServiceFg
-msgDateImgBg: #1D202180
-msgDateImgBgOver: #1D2021A0
-msgDateImgBgSelected: #458588A0
+msgDateImgBg: #1D202180 // bg0_h with transparency
+msgDateImgBgOver: #1D2021A0 // bg0_h with transparency
+msgDateImgBgSelected: #458588A0 // blue with transparency
 msgFileThumbLinkInFg: lightButtonFg
-msgFileThumbLinkInFgSelected: #83A598
-msgFileThumbLinkOutFg: #B8BB26
-msgFileThumbLinkOutFgSelected: #8EC07C
+msgFileThumbLinkInFgSelected: #83A598 // bright blue
+msgFileThumbLinkOutFg: #B8BB26 // bright green
+msgFileThumbLinkOutFgSelected: #8EC07C // bright aqua
 msgFileInBg: windowBgActive
-msgFileInBgOver: #5A8BA3
-msgFileInBgSelected: #4A7B93
-msgFileOutBg: #B8BB26
-msgFileOutBgOver: #98971A
-msgFileOutBgSelected: #8EC07C
-msgFile1Bg: #83A598
-msgFile1BgDark: #458588
-msgFile1BgOver: #3C7A93
-msgFile1BgSelected: #4A7B93
-msgFile2Bg: #B8BB26
-msgFile2BgDark: #98971A
-msgFile2BgOver: #8FAD1F
-msgFile2BgSelected: #8EC07C
-msgFile3Bg: #FB4934
-msgFile3BgDark: #CC241D
-msgFile3BgOver: #E5301D
-msgFile3BgSelected: #D3869B
-msgFile4Bg: #FABD2F
-msgFile4BgDark: #D79921
-msgFile4BgOver: #D48B1D
-msgFile4BgSelected: #FE8019
+msgFileInBgOver: #5A8BA3 // blue (lighter)
+msgFileInBgSelected: #4A7B93 // blue (darker)
+msgFileOutBg: #B8BB26 // bright green
+msgFileOutBgOver: #98971A // green
+msgFileOutBgSelected: #8EC07C // bright aqua
+msgFile1Bg: #83A598 // bright blue
+msgFile1BgDark: #458588 // blue
+msgFile1BgOver: #3C7A93 // blue (darker)
+msgFile1BgSelected: #4A7B93 // blue (darker)
+msgFile2Bg: #B8BB26 // bright green
+msgFile2BgDark: #98971A // green
+msgFile2BgOver: #8FAD1F // green (darker)
+msgFile2BgSelected: #8EC07C // bright aqua
+msgFile3Bg: #FB4934 // bright red
+msgFile3BgDark: #CC241D // red
+msgFile3BgOver: #E5301D // red (darker)
+msgFile3BgSelected: #D3869B // bright purple
+msgFile4Bg: #FABD2F // bright yellow
+msgFile4BgDark: #D79921 // yellow
+msgFile4BgOver: #D48B1D // yellow (darker)
+msgFile4BgSelected: #FE8019 // bright orange
 historyFileInIconFg: msgInBg
 historyFileInIconFgSelected: msgInBgSelected
 historyFileInRadialFg: historyFileInIconFg
@@ -358,27 +358,27 @@ historyFileThumbIconFg: msgInBg
 historyFileThumbIconFgSelected: msgInBgSelected
 historyFileThumbRadialFg: historyFileThumbIconFg
 historyFileThumbRadialFgSelected: historyFileThumbIconFgSelected
-historyVideoMessageProgressFg: #83a598
+historyVideoMessageProgressFg: #83A598 // bright blue
 msgWaveformInActive: windowBgActive
-msgWaveformInActiveSelected: #4A7B93
-msgWaveformInInactive: #665C54
-msgWaveformInInactiveSelected: #7C6F64
-msgWaveformOutActive: #B8BB26
-msgWaveformOutActiveSelected: #8EC07C
-msgWaveformOutInactive: #A89984
-msgWaveformOutInactiveSelected: #BDAE93
-msgBotKbOverBgAdd: #FBF1C730
+msgWaveformInActiveSelected: #4A7B93 // blue (darker)
+msgWaveformInInactive: #665C54 // bg3
+msgWaveformInInactiveSelected: #7C6F64 // bg4
+msgWaveformOutActive: #B8BB26 // bright green
+msgWaveformOutActiveSelected: #8EC07C // bright aqua
+msgWaveformOutInactive: #A89984 // fg4
+msgWaveformOutInactiveSelected: #BDAE93 // fg3
+msgBotKbOverBgAdd: #FBF1C730 // fg0 with transparency
 msgBotKbIconFg: msgServiceFg
-msgBotKbRippleBg: #1D202140
+msgBotKbRippleBg: #1D202140 // bg0_h with transparency
 mediaInFg: msgInDateFg
 mediaInFgSelected: msgInDateFgSelected
 mediaOutFg: msgOutDateFg
 mediaOutFgSelected: msgOutDateFgSelected
-youtubePlayIconBg: #FB4934D0
+youtubePlayIconBg: #FB4934D0 // bright red with transparency
 youtubePlayIconFg: windowFgActive
-videoPlayIconBg: #1D2021B0
-videoPlayIconFg: #FBF1C7
-toastBg: #3C3836D0
+videoPlayIconBg: #1D2021B0 // bg0_h with transparency
+videoPlayIconFg: #FBF1C7 // fg0
+toastBg: #3C3836D0 // bg1 with transparency
 toastFg: windowFgActive
 reportSpamBg: emojiPanHeaderBg
 reportSpamFg: windowFg
@@ -387,14 +387,14 @@ historyToDownBgOver: windowBgOver
 historyToDownBgRipple: windowBgRipple
 historyToDownFg: menuIconFg
 historyToDownFgOver: menuIconFgOver
-historyToDownShadow: #1D202160
-historyComposeAreaBg: #282828
+historyToDownShadow: #1D202160 // bg0_h with transparency
+historyComposeAreaBg: #282828 // bg0
 historyComposeAreaFg: historyTextInFg
 historyComposeAreaFgService: msgInDateFg
 historyComposeIconFg: menuIconFg
 historyComposeIconFgOver: menuIconFgOver
 historySendIconFg: windowBgActive
-historySendIconFgOver: #5A8BA3
+historySendIconFgOver: #5A8BA3 // blue (lighter)
 historyPinnedBg: historyComposeAreaBg
 historyReplyBg: historyComposeAreaBg
 historyReplyIconFg: windowBgActive
@@ -403,15 +403,15 @@ historyReplyCancelFgOver: cancelIconFgOver
 historyComposeButtonBg: historyComposeAreaBg
 historyComposeButtonBgOver: windowBgOver
 historyComposeButtonBgRipple: windowBgRipple
-mapPointDrop: #FB4934
-mapPointDot: #FBF1C7
-overviewCheckBg: #1D202160
+mapPointDrop: #FB4934 // bright red
+mapPointDot: #FBF1C7 // fg0
+overviewCheckBg: #1D202160 // bg0_h with transparency
 overviewCheckBgActive: windowBgActive
 overviewCheckBorder: windowBg
 overviewCheckFg: windowBg
 overviewCheckFgActive: windowBg
-overviewPhotoSelectOverlay: #45858850
-profileStatusFgOver: #BDAE93
+overviewPhotoSelectOverlay: #45858850 // blue with transparency
+profileStatusFgOver: #BDAE93 // fg3
 profileVerifiedCheckBg: windowBgActive
 profileVerifiedCheckFg: windowFgActive
 profileAdminStartFg: windowBgActive
@@ -421,80 +421,80 @@ profileOtherAdminStarFgOver: profileStatusFgOver
 notificationsBoxMonitorFg: windowFg
 notificationsBoxScreenBg: dialogsBgActive
 notificationSampleUserpicFg: windowBgActive
-notificationSampleCloseFg: #A89984
-notificationSampleTextFg: #A89984
-notificationSampleNameFg: #7C6F64
+notificationSampleCloseFg: #A89984 // fg4
+notificationSampleTextFg: #A89984 // fg4
+notificationSampleNameFg: #7C6F64 // bg4
 changePhoneSimcardFrom: notificationSampleTextFg
 changePhoneSimcardTo: notificationSampleNameFg
 mainMenuBg: windowBg
 mainMenuCoverBg: dialogsBgActive
 mainMenuCoverFg: windowFgActive
 mainMenuCloudFg: activeButtonFg
-mainMenuCloudBg: #458588
+mainMenuCloudBg: #458588 // blue
 mediaPlayerBg: windowBg
 mediaPlayerActiveFg: windowBgActive
 mediaPlayerInactiveFg: sliderBgInactive
-mediaPlayerDisabledFg: #7C6F64
+mediaPlayerDisabledFg: #7C6F64 // bg4
 mediaviewFileBg: windowBg
 mediaviewFileNameFg: windowFg
 mediaviewFileSizeFg: windowSubTextFg
-mediaviewFileRedCornerFg: #FB4934
-mediaviewFileYellowCornerFg: #FABD2F
-mediaviewFileGreenCornerFg: #B8BB26
-mediaviewFileBlueCornerFg: #83A598
+mediaviewFileRedCornerFg: #FB4934 // bright red
+mediaviewFileYellowCornerFg: #FABD2F // bright yellow
+mediaviewFileGreenCornerFg: #B8BB26 // bright green
+mediaviewFileBlueCornerFg: #83A598 // bright blue
 mediaviewFileExtFg: activeButtonFg
-mediaviewMenuBg: #282828
-mediaviewMenuBgOver: #3C3836
-mediaviewMenuBgRipple: #504945
+mediaviewMenuBg: #282828 // bg0
+mediaviewMenuBgOver: #3C3836 // bg1
+mediaviewMenuBgRipple: #504945 // bg2
 mediaviewMenuFg: windowFgActive
-mediaviewBg: #1D2021F0
+mediaviewBg: #1D2021F0 // bg0_h with transparency
 mediaviewVideoBg: imageBg
-mediaviewControlBg: #1D202160
+mediaviewControlBg: #1D202160 // bg0_h with transparency
 mediaviewControlFg: windowFgActive
-mediaviewCaptionBg: #1D2021C0
+mediaviewCaptionBg: #1D2021C0 // bg0_h with transparency
 mediaviewCaptionFg: mediaviewControlFg
-mediaviewTextLinkFg: #83A598
+mediaviewTextLinkFg: #83A598 // bright blue
 mediaviewSaveMsgBg: toastBg
 mediaviewSaveMsgFg: toastFg
-mediaviewPlaybackActive: #EBDBB2
-mediaviewPlaybackInactive: #3C3836
-mediaviewPlaybackActiveOver: #FBF1C7
-mediaviewPlaybackInactiveOver: #504945
-mediaviewPlaybackProgressFg: #FBF1C7D0
+mediaviewPlaybackActive: #EBDBB2 // fg1
+mediaviewPlaybackInactive: #3C3836 // bg1
+mediaviewPlaybackActiveOver: #FBF1C7 // fg0
+mediaviewPlaybackInactiveOver: #504945 // bg2
+mediaviewPlaybackProgressFg: #FBF1C7D0 // fg0 with transparency
 mediaviewPlaybackIconFg: mediaviewPlaybackActive
 mediaviewPlaybackIconFgOver: mediaviewPlaybackActiveOver
-mediaviewTransparentBg: #FBF1C7
-mediaviewTransparentFg: #A89984
+mediaviewTransparentBg: #FBF1C7 // fg0
+mediaviewTransparentFg: #A89984 // fg4
 notificationBg: windowBg
-callBg: #282828F2
-callNameFg: #FBF1C7
-callFingerprintBg: #1D2021A0
-callStatusFg: #A89984
-callIconFg: #FBF1C7
-callAnswerBg: #B8BB26
-callAnswerRipple: #98971A
-callAnswerBgOuter: #B8BB2640
-callHangupBg: #FB4934
-callHangupRipple: #CC241D
-callCancelBg: #FBF1C7
-callCancelFg: #7C6F64
-callCancelRipple: #D5C4A1
-callMuteRipple: #FBF1C730
+callBg: #282828F2 // bg0 with transparency
+callNameFg: #FBF1C7 // fg0
+callFingerprintBg: #1D2021A0 // bg0_h with transparency
+callStatusFg: #A89984 // fg4
+callIconFg: #FBF1C7 // fg0
+callAnswerBg: #B8BB26 // bright green
+callAnswerRipple: #98971A // green
+callAnswerBgOuter: #B8BB2640 // bright green with transparency
+callHangupBg: #FB4934 // bright red
+callHangupRipple: #CC241D // red
+callCancelBg: #FBF1C7 // fg0
+callCancelFg: #7C6F64 // bg4
+callCancelRipple: #D5C4A1 // fg2
+callMuteRipple: #FBF1C730 // fg0 with transparency
 callBarBg: dialogsBgActive
 callBarMuteRipple: dialogsRippleBgActive
-callBarBgMuted: #7C6F64
-callBarUnmuteRipple: #665C54
+callBarBgMuted: #7C6F64 // bg4
+callBarUnmuteRipple: #665C54 // bg3
 callBarFg: dialogsNameFgActive
 importantTooltipBg: toastBg
 importantTooltipFg: toastFg
 importantTooltipFgLink: mediaviewTextLinkFg
-sideBarBg: #32302F
-sideBarBgActive: #458588
-sideBarTextFg: #BDAE93
-sideBarIconFg: #BDAE93
-sideBarBadgeBg: #D79921
-sideBarBadgeFg: #EBDBB2
-sideBarBgRipple: #3C3836
-sideBarTextFgActive: #EBDBB2
-sideBarIconFgActive: #EBDBB2
-sideBarBadgeBgMuted: #928374
+sideBarBg: #32302F // bg0_s (slightly darker than bg0)
+sideBarBgActive: #458588 // blue
+sideBarTextFg: #BDAE93 // fg3
+sideBarIconFg: #BDAE93 // fg3
+sideBarBadgeBg: #D79921 // yellow
+sideBarBadgeFg: #EBDBB2 // fg1
+sideBarBgRipple: #3C3836 // bg1
+sideBarTextFgActive: #EBDBB2 // fg1
+sideBarIconFgActive: #EBDBB2 // fg1
+sideBarBadgeBgMuted: #928374 // gray
