@@ -358,7 +358,7 @@ historyFileThumbIconFg: msgInBg
 historyFileThumbIconFgSelected: msgInBgSelected
 historyFileThumbRadialFg: historyFileThumbIconFg
 historyFileThumbRadialFgSelected: historyFileThumbIconFgSelected
-historyVideoMessageProgressFg: historyFileThumbIconFg
+historyVideoMessageProgressFg: #83a598
 msgWaveformInActive: windowBgActive
 msgWaveformInActiveSelected: #4A7B93
 msgWaveformInInactive: #665C54
