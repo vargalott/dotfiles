@@ -8253,6 +8253,18 @@ dialog.xfsm-logout-dialog {
   box-shadow: inset 0 -1px rgba(251, 241, 199, 0.12);
 }
 
+.thunar .sidebar .view, .thunar .standard-view .view{
+  background-color: #282828;
+}
+
+.thunar .sidebar .view:selected {
+  background-color: @theme_selected_bg_color;
+}
+
+.thunar treeview header button {
+  background-color: #282828;
+}
+
 .thunar .standard-view.frame {
   border: none;
 }

@@ -8257,6 +8257,10 @@ dialog.xfsm-logout-dialog {
   background-color: #282828;
 }
 
+.thunar .sidebar .view:selected {
+  background-color: @theme_selected_bg_color;
+}
+
 .thunar treeview header button {
   background-color: #282828;
 }
