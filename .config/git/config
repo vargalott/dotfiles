@@ -19,7 +19,7 @@ gpgSign = true
 defaultBranch = main
 
 [core]
-editor = code --wait
+editor = micro
 
 [pull]
 ff = only
