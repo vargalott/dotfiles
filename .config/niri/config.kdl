@@ -336,6 +336,11 @@ window-rule {
 }
 
 window-rule {
+	match app-id="^org.telegram.desktop$" title=r#"Mini App:.*"#
+	open-floating true
+}
+
+window-rule {
     match app-id="^org.pulseaudio.pavucontrol$"
     open-floating true
     default-column-width 	{ fixed 640; }
