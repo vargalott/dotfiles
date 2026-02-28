@@ -324,6 +324,7 @@ window-rule {
     match app-id="^thunar$" title=r#"File Operation Progress"#
     match app-id="^blueman-manager$"
     match app-id="^org.telegram.desktop$" title="^Media viewer$"
+    match app-id="^org.telegram.desktop$" title=r#"Mini App:.*"#
     match app-id="^steam$" title="^Friends List$"
     match app-id="^steam$" title="^Steam Settings$"
     match app-id="^Alacritty$" title="^wiremix$"
@@ -337,8 +338,10 @@ window-rule {
 }
 
 window-rule {
-	match app-id="^org.telegram.desktop$" title=r#"Mini App:.*"#
-	open-floating true
+	match app-id="^Alacritty$" title="^cava$"
+	default-floating-position x=10 y=10 relative-to="top-right"
+	default-column-width 	{ fixed 500; }
+	default-window-height 	{ fixed 200; }
 }
 
 window-rule {
