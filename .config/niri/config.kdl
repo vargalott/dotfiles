@@ -92,7 +92,7 @@ binds {
     Mod+Shift+Slash 	{ show-hotkey-overlay; }
 
     // Application bindings
-    Mod+T 				{ spawn "alacritty"; }
+    Mod+T 				{ spawn "kitty"; }
     Mod+E 				{ spawn "thunar"; }
     Mod+B 				{ spawn "zen-browser"; }
     Mod+L 				{ spawn "hyprlock"; }
@@ -238,9 +238,9 @@ layout {
     }
 
     preset-column-widths {
-        proportion 0.33333
+        proportion 0.25
         proportion 0.5
-        proportion 0.66667
+        proportion 0.75
         proportion 1.0
     }
 
@@ -283,8 +283,6 @@ animations {
     }
 }
 
-
-
 cursor {
     xcursor-theme "Bibata-Modern-Ice"
     xcursor-size 24
@@ -311,6 +309,9 @@ window-rule {
 
 window-rule {
     match app-id="^zen$"
+    match app-id="^firefox$"
+    match app-id="^librewolf$"
+    match app-id="^Tor Browser$"
     match app-id="^org.telegram.desktop$"
     match app-id="^code$"
     match app-id="^steam$"
@@ -318,7 +319,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="$xdg-desktop-portal-.*^"
+    match app-id=r#"$xdg-desktop-portal-.*^"#
     match app-id="^mpv$"
     match app-id="^thunar$" title=r#"Rename.*"#
     match app-id="^thunar$" title=r#"File Operation Progress"#
