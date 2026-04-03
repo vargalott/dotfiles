@@ -104,8 +104,8 @@
         "format-muted": "0%",
         "max-volume": 100,
         "scroll-step": 2,
-        "on-click": "alacritty -T wiremix -e wiremix --mouse -v output",
-        "on-click-right": "alacritty -T cava -e cava",
+        "on-click": "pavucontrol",
+        "on-click-right": "kitty -T cava -e cava",
     },
     "clock": {
         "format": "{:%H:%M:%S | %Y-%m-%d}",
