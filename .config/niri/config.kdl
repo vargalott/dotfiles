@@ -97,6 +97,7 @@ binds {
     Mod+B 				{ spawn "zen-browser"; }
     Mod+L 				{ spawn "hyprlock"; }
     Mod+R 				{ spawn-sh "~/.config/fuzzel/menu.sh"; }
+    // Mod+R               { spawn-sh "kitty -T otter-launcher -e otter-launcher"; }
     Mod+P 				{ spawn-sh "~/.config/fuzzel/powermenu.sh"; }
     Mod+Y 				{ spawn-sh "~/.config/waybar/run.sh"; }
 
@@ -315,6 +316,7 @@ window-rule {
     match app-id="^org.telegram.desktop$"
     match app-id="^code$"
     match app-id="^steam$"
+    match app-id="^discord$"
     open-maximized true
 }
 
@@ -335,6 +337,13 @@ window-rule {
 window-rule {
 	match app-id="^org.telegram.desktop$" at-startup=true
 	open-focused false
+}
+
+window-rule {
+    match app-id="^kitty$" title="^otter-launcher$"
+    open-floating true
+    default-column-width 	{ fixed 400; }
+    default-window-height 	{ fixed 200; }
 }
 
 window-rule {
@@ -366,4 +375,9 @@ window-rule {
     match app-id="^clash-verge$"
     open-maximized false
     open-maximized-to-edges false
+}
+
+window-rule {
+    match app-id="^Waydroid$"
+	open-fullscreen true
 }
