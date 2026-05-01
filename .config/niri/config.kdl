@@ -96,9 +96,11 @@ binds {
   Mod+E             { spawn "thunar"; }
   Mod+B             { spawn "zen-browser"; }
   Mod+L             { spawn "hyprlock"; }
-  Mod+R             { spawn-sh "~/.config/fuzzel/menu.sh"; }
+  // Mod+R             { spawn-sh "~/.config/fuzzel/menu.sh"; }
   // Mod+R             { spawn-sh "kitty -T otter-launcher -e otter-launcher"; }
-  Mod+P             { spawn-sh "~/.config/fuzzel/powermenu.sh"; }
+  Mod+R             { spawn-sh "kitty -T 'fzf applications' -e ~/.config/fzf/menu.sh"; }
+  // Mod+P             { spawn-sh "~/.config/fuzzel/powermenu.sh"; }
+  Mod+P             { spawn-sh "kitty -T 'fzf power menu' -e ~/.config/fzf/powermenu.sh"; }
   Mod+Y             { spawn-sh "~/.config/waybar/run.sh"; }
 
   // Finer adjustments
@@ -336,12 +338,21 @@ window-rule {
   open-focused false
 }
 
-// floating fized size otter-launcher
+// floating fixed size otter-launcher, kitty+fzf/menu.sh
 window-rule {
   match app-id="^kitty$" title="^otter-launcher$"
+  match app-id="^kitty$" title="^fzf applications$"
   open-floating true
   default-column-width    { fixed 400; }
-  default-window-height   { fixed 200; }
+  default-window-height   { fixed 300; }
+}
+
+// floating fixed size kitty+fzf/powermenu.sh
+window-rule {
+  match app-id="^kitty$" title="^fzf power menu$"
+  open-floating true
+  default-column-width    { fixed 125; }
+  default-window-height   { fixed 100; }
 }
 
 // floating fixed size at the corner cava in kitty
