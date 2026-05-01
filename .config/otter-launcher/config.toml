@@ -90,7 +90,7 @@ case $1 in
 "shutdown") systemctl poweroff ;;
 "reboot") systemctl reboot ;;
 "lock") hyprlock -q ;;
-"logout") ( [[ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]] && hyprctl dispatch exit ) || ( [[ -n "$NIRI_SOCKET" ]] && niri msg action quit -s ) ;;
+"logout") ( [[ -n "$NIRI_SOCKET" ]] && niri msg action quit -s ) || ( [[ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]] && hyprctl dispatch exit ) ;;
 esac fi }
 power $(echo -e 'shutdown\nreboot\nlock\nlogout' | fzf --info-command 'printf " power menu ($FZF_POS/$FZF_TOTAL_COUNT)"' --cycle --gutter " " --pointer " ▌" --color "bg+:-1,pointer:1,info:8,separator:8,scrollbar:0" --prompt '  ' | tail -1)
 """
