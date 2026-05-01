@@ -1,145 +1,157 @@
 {
-    "height": 38,
-    "layer": "top",
-    "position": "top",
+  "height": 38,
+  "layer": "top",
+  "position": "top",
 
-    // compositor-specific modules may coexist in the config;
-    // waybar attempts to initialize all listed modules unconditionally;
-    // unsupported modules (e.g. hyprland/* on Niri or niri/* on Hyprland)
-    // simply fail to initialize and are skipped without affecting the bar
-    "modules-left": [
-        "custom/logo",
-        "hyprland/workspaces",
-        "niri/workspaces",
-    ],
-    "modules-center": [
-        "hyprland/window",
-        "niri/window",
-    ],
-    "modules-right": [
-        "privacy",
-        "cava",
-        "tray",
-        "wireplumber#icon",
-        "wireplumber#value",
-        "clock",
-        "hyprland/language",
-        "niri/language",
-        "custom/power",
-    ],
+  // compositor-specific modules may coexist in the config;
+  // waybar attempts to initialize all listed modules unconditionally;
+  // unsupported modules (e.g. hyprland/* on Niri or niri/* on Hyprland)
+  // simply fail to initialize and are skipped without affecting the bar
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces",
+    "niri/workspaces",
+  ],
 
-    "custom/logo": {
-        "format": "\ue3bf",
-        "on-click": "$HOME/.config/waybar/menu.sh",
-        "tooltip-format": "Applications",
+  "modules-center": [
+    "hyprland/window",
+    "niri/window",
+  ],
+
+  "modules-right": [
+    "privacy",
+    // "cava",
+    "tray",
+    "wireplumber#icon",
+    "wireplumber#value",
+    "clock",
+    "niri/language",
+    "hyprland/language",
+    "custom/power",
+  ],
+
+  "custom/logo": {
+    "format": "\ue3bf",
+    "on-click": "$HOME/.config/waybar/menu.sh",
+    "tooltip-format": "Applications",
+  },
+
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "\udb82\udf3a",
+      "2": "\udb82\udf3b",
+      "3": "\udb82\udf3c",
+      "4": "\udb82\udf3d",
+      "5": "\udb82\udf3e",
+      "6": "\udb82\udf3f",
+      "7": "\udb82\udf40",
+      "8": "\udb82\udf41",
+      "9": "\udb82\udf42",
     },
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "1": "\udb82\udf3a",
-            "2": "\udb82\udf3b",
-            "3": "\udb82\udf3c",
-            "4": "\udb82\udf3d",
-            "5": "\udb82\udf3e",
-            "6": "\udb82\udf3f",
-            "7": "\udb82\udf40",
-            "8": "\udb82\udf41",
-            "9": "\udb82\udf42",
-        },
-        "on-click": "activate",
+    "on-click": "activate",
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "\udb82\udf3a",
+      "2": "\udb82\udf3b",
+      "3": "\udb82\udf3c",
+      "4": "\udb82\udf3d",
+      "5": "\udb82\udf3e",
+      "6": "\udb82\udf3f",
+      "7": "\udb82\udf40",
+      "8": "\udb82\udf41",
+      "9": "\udb82\udf42",
     },
-    "niri/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "1": "\udb82\udf3a",
-            "2": "\udb82\udf3b",
-            "3": "\udb82\udf3c",
-            "4": "\udb82\udf3d",
-            "5": "\udb82\udf3e",
-            "6": "\udb82\udf3f",
-            "7": "\udb82\udf40",
-            "8": "\udb82\udf41",
-            "9": "\udb82\udf42",
-        },
-        "on-click": "activate",
-    },
-    "privacy": {
-        "icon-spacing": 4,
-        "icon-size": 16,
-        "transition-duration": 250,
-        "modules": [
-            {
-                "type": "screenshare",
-                "tooltip": true,
-                "tooltip-icon-size": 24,
-            },
-            {
-                "type": "audio-in",
-                "tooltip": true,
-                "tooltip-icon-size": 24,
-            },
-        ],
-    },
-    "tray": {
-        "icon-size": 16,
-        "spacing": 10,
-        "show-passive-items": true,
-    },
-    "wireplumber#icon": {
-        "format": "{icon}",
-        "format-muted": "\udb81\udf5f",
-        "format-icons": [
-            "\udb81\udd7f",
-            "\udb81\udd80",
-            "\udb81\udd80",
-            "\udb81\udd7e",
-            "\udb81\udd7e",
-        ],
-        "max-volume": 100,
-        "scroll-step": 2,
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-    },
-    "wireplumber#value": {
-        "format": "{volume}%",
-        "format-muted": "0%",
-        "max-volume": 100,
-        "scroll-step": 2,
-        "on-click": "pavucontrol",
-        "on-click-right": "kitty -T cava -e cava",
-    },
-    "clock": {
-        "format": "{:%H:%M:%S | %Y-%m-%d}",
-        "interval": 1,
-        // "tooltip": true,
-        // "tooltip-format": "<tt>{calendar}</tt>",
-        // "actions": {
-        //     "on-scroll-up": "shift_down",
-        //     "on-scroll-down": "shift_up",
-        // },
-        // "calendar": {
-        //     "mode": "month",
-        //     "weeks-pos": "right",
-        //     "on-scroll": 1,
-        //     "format": {
-        //         "months": "<span color='#d65d0e'><b>{}</b></span>",         // gruvbox:dark-mode(orange)
-        //         "days": "<span color='#bdae93'><b>{}</b></span>",           // gruvbox:dark-mode(fg3)
-        //         "weeks": "<span color='#fabd2f'><b>{:%V}</b></span>",       // gruvbox:dark-mode(yellow)
-        //         "weekdays": "<span color='#fabd2f'><b>{}</b></span>",       // gruvbox:dark-mode(yellow)
-        //         "today": "<span color='#fb4934'><b><u>{}</u></b></span>"    // gruvbox:dark-mode(red)
-        //     }
-        // }
-    },
-    "hyprland/language": {
-        "format": "{short}",
-        "on-click": "hyprctl switchxkblayout current next",
-    },
-    "niri/language": {
-        "format": "{short}",
-        "on-click": "niri msg action switch-layout next",
-    },
-    "custom/power": {
-        "format": "\udb81\udc25",
-        "on-click": "$HOME/.config/waybar/powermenu.sh",
-        "tooltip-format": "Power Menu",
-    },
+    "on-click": "activate",
+  },
+
+  "privacy": {
+    "icon-spacing": 4,
+    "icon-size": 16,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24,
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24,
+      },
+    ],
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10,
+    "show-passive-items": true,
+  },
+
+  "wireplumber#icon": {
+    "format": "{icon}",
+    "format-muted": "\udb81\udf5f",
+    "format-icons": [
+      "\udb81\udd7f",
+      "\udb81\udd80",
+      "\udb81\udd80",
+      "\udb81\udd7e",
+      "\udb81\udd7e",
+    ],
+    "max-volume": 100,
+    "scroll-step": 2,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+
+  "wireplumber#value": {
+    "format": "{volume}%",
+    "format-muted": "0%",
+    "max-volume": 100,
+    "scroll-step": 2,
+    "on-click": "pavucontrol",
+    "on-click-right": "kitty -T cava -e cava",
+  },
+
+  "clock": {
+    "format": "{:%H:%M:%S | %Y-%m-%d}",
+    "interval": 1,
+    // "tooltip": true,
+    // "tooltip-format": "<tt>{calendar}</tt>",
+    // "actions": {
+    //     "on-scroll-up": "shift_down",
+    //     "on-scroll-down": "shift_up",
+    // },
+    // "calendar": {
+    //     "mode": "month",
+    //     "weeks-pos": "right",
+    //     "on-scroll": 1,
+    //     "format": {
+    //         "months": "<span color='#d65d0e'><b>{}</b></span>",         // gruvbox:dark-mode(orange)
+    //         "days": "<span color='#bdae93'><b>{}</b></span>",           // gruvbox:dark-mode(fg3)
+    //         "weeks": "<span color='#fabd2f'><b>{:%V}</b></span>",       // gruvbox:dark-mode(yellow)
+    //         "weekdays": "<span color='#fabd2f'><b>{}</b></span>",       // gruvbox:dark-mode(yellow)
+    //         "today": "<span color='#fb4934'><b><u>{}</u></b></span>"    // gruvbox:dark-mode(red)
+    //     }
+    // }
+  },
+
+  "niri/language": {
+    "format": "{short}",
+    "on-click": "niri msg action switch-layout next",
+  },
+
+  "hyprland/language": {
+    "format": "{short}",
+    "on-click": "hyprctl switchxkblayout current next",
+  },
+
+  "custom/power": {
+    "format": "\udb81\udc25",
+    "on-click": "$HOME/.config/waybar/powermenu.sh",
+    "tooltip-format": "Power Menu",
+  },
 }
