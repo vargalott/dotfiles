@@ -33,7 +33,7 @@
   "custom/logo": {
     "format": "\ue3bf",
     // "on-click": "$HOME/.config/waybar/menu.sh",
-    "on-click": "kitty -T 'fzf applications' -e $HOME/.config/fzf/menu.sh",
+    "on-click": "kitty -T 'fzf applications' -e $HOME/.config/scripts/fzf/menu.sh",
     "tooltip-format": "Applications",
   },
 
@@ -153,7 +153,7 @@
   "custom/power": {
     "format": "\udb81\udc25",
     // "on-click": "$HOME/.config/waybar/powermenu.sh",
-    "on-click": "kitty -T 'fzf power menu' -e $HOME/.config/fzf/powermenu.sh",
+    "on-click": "kitty -T 'fzf power menu' -e $HOME/.config/scripts/fzf/powermenu.sh",
     "tooltip-format": "Power Menu",
   },
 }
