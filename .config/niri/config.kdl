@@ -34,7 +34,7 @@ output "HDMI-A-1" {
 // https://yalter.github.io/niri/Configuration:-Miscellaneous#spawn-sh-at-startup
 //
 
-// Core
+// core
 spawn-sh-at-startup   "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 spawn-sh-at-startup   "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-sh-at-startup   "~/.config/waybar/run.sh"
@@ -43,7 +43,7 @@ spawn-at-startup      "hyprpaper"
 spawn-at-startup      "hyprsunset"
 spawn-at-startup      "dunst"
 
-// Applications
+// applications
 spawn-at-startup      "clash-verge"
 spawn-at-startup      "zen-browser"
 spawn-sh-at-startup   "sleep 3 && Telegram"
@@ -91,7 +91,7 @@ binds {
   // Help
   Mod+Shift+Slash   { show-hotkey-overlay; }
 
-  // Application bindings
+  // application bindings
   Mod+T             { spawn "kitty"; }
   Mod+E             { spawn "thunar"; }
   Mod+B             { spawn "zen-browser"; }
@@ -103,7 +103,7 @@ binds {
   Mod+P             { spawn-sh "kitty -T 'fzf power menu' -e ~/.config/fzf/powermenu.sh"; }
   Mod+Y             { spawn-sh "~/.config/waybar/run.sh"; }
 
-  // Finer adjustments
+  // finer adjustments
   Mod+Minus         { set-column-width "-10%"; }
   Mod+Equal         { set-column-width "+10%"; }
   Mod+Shift+Minus   { set-window-height "-10%"; }
@@ -114,12 +114,12 @@ binds {
   Mod+Shift+F       { maximize-column; }
   Mod+Ctrl+F        { expand-column-to-available-width; }
 
-  // Screenshots
+  // screenshots
   Print             { screenshot-screen; }
   Mod+Print         { screenshot-window; }
   Shift+Print       { screenshot; }
 
-  // Multimedia keys
+  // multimedia keys
   XF86AudioRaiseVolume allow-when-locked=true     { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1.0"; }
   XF86AudioLowerVolume allow-when-locked=true     { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"; }
   XF86AudioMute        allow-when-locked=true     { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
@@ -129,7 +129,7 @@ binds {
   XF86AudioPrev        allow-when-locked=true     { spawn-sh "playerctl previous"; }
   XF86AudioNext        allow-when-locked=true     { spawn-sh "playerctl next"; }
 
-  // Navigation
+  // navigation
   Mod+Left              { focus-column-left; }
   Mod+Down              { focus-window-down; }
   Mod+Up                { focus-window-up; }
@@ -165,7 +165,7 @@ binds {
   Mod+Comma             repeat=false      { consume-or-expel-window-left; }
   Mod+Period            repeat=false      { consume-or-expel-window-right; }
 
-  // Navigation with mouse
+  // navigation with mouse
   Mod+WheelScrollDown   cooldown-ms=150   { focus-workspace-down; }
   Mod+WheelScrollUp     cooldown-ms=150   { focus-workspace-up; }
   Mod+Shift+WheelScrollDown               { focus-column-right; }
@@ -173,10 +173,10 @@ binds {
   Mod+Ctrl+Shift+WheelScrollDown          { move-column-right; }
   Mod+Ctrl+Shift+WheelScrollUp            { move-column-left; }
 
-  // Workspaces
-  // You can refer to workspaces by index. However, keep in mind that
+  // workspaces
+  // you can refer to workspaces by index; however, keep in mind that
   // niri is a dynamic workspace system, so these commands are kind of
-  // "best effort". Trying to refer to a workspace index bigger than
+  // "best effort"; trying to refer to a workspace index bigger than
   // the current workspace count will instead refer to the bottommost
   // (empty) workspace.
   Mod+1         { focus-workspace 1; }
@@ -221,7 +221,7 @@ environment {
   QT_QPA_PLATFORM                       "wayland;xcb"
   QT_QPA_PLATFORMTHEME                  "qt6ct"
   QT_WAYLAND_DISABLE_WINDOWDECORATION   "1"
-  ELECTRON_OZONE_PLATFORM_HINT           "auto"
+  ELECTRON_OZONE_PLATFORM_HINT          "auto"
 }
 
 
