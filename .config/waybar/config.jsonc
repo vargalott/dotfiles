@@ -32,7 +32,7 @@
 
   "custom/logo": {
     "format": "\ue3bf",
-    // "on-click": "$HOME/.config/scripts/waybar/menu.sh",
+    // "on-click": "( [[ -n "$NIRI_SOCKET" ]] && exec "$HOME/.config/fuzzel/menu.sh" ) || ( [[ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]] && exec "$HOME/.config/wofi/menu.sh" )",
     "on-click": "kitty -T 'fzf applications' -e $HOME/.config/scripts/fzf/menu.sh",
     "tooltip-format": "Applications",
   },
@@ -152,7 +152,7 @@
 
   "custom/power": {
     "format": "\udb81\udc25",
-    // "on-click": "$HOME/.config/scripts/waybar/powermenu.sh",
+    // "on-click": "( [[ -n "$NIRI_SOCKET" ]] && exec "$HOME/.config/fuzzel/menu.sh" ) || ( [[ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]] && exec "$HOME/.config/wofi/menu.sh" )",
     "on-click": "kitty -T 'fzf power menu' -e $HOME/.config/scripts/fzf/powermenu.sh",
     "tooltip-format": "Power Menu",
   },
