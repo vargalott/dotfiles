@@ -1,5 +1,5 @@
 export LC_ALL=en_US.UTF-8
-export TERM=xterm-256color
+export TERM=xterm-kitty
 
 # history
 setopt EXTENDED_HISTORY
