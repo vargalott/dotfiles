@@ -98,11 +98,11 @@ binds {
   Mod+L             { spawn "hyprlock"; }
   // Mod+R             { spawn-sh "$HOME/.config/scripts/fuzzel/menu.sh"; }
   // Mod+R             { spawn-sh "kitty -T otter-launcher -e otter-launcher"; }
-  Mod+R             { spawn-sh "kitty -T 'fzf applications' -e $HOME/.config/scripts/fzf/menu.sh"; }
+  Mod+R             { spawn-sh "kitty -T 'fzf applications' -e $HOME/.config/scripts/fzf/applications.menu.sh"; }
   // Mod+P             { spawn-sh "$HOME/.config/scripts/fuzzel/powermenu.sh"; }
-  Mod+P             { spawn-sh "kitty -T 'fzf power menu' -e $HOME/.config/scripts/fzf/powermenu.sh"; }
+  Mod+P             { spawn-sh "kitty -T 'fzf power' -e $HOME/.config/scripts/fzf/power.menu.sh"; }
   Mod+Y             { spawn-sh "$HOME/.config/scripts/waybar/waybar.sh"; }
-  Mod+U             { spawn-sh "kitty -T 'fzf wallpapers' -e $HOME/.config/scripts/fzf/wallpapermenu.sh"; }
+  Mod+U             { spawn-sh "kitty -T 'fzf wallpapers' -e $HOME/.config/scripts/fzf/wallpaper.menu.sh"; }
 
   // finer adjustments
   Mod+Minus         { set-column-width "-10%"; }
@@ -350,7 +350,7 @@ window-rule {
 
 // floating fixed size kitty+fzf/powermenu.sh
 window-rule {
-  match app-id="^kitty$" title="^fzf power menu$"
+  match app-id="^kitty$" title="^fzf power$"
   open-floating true
   default-column-width    { fixed 125; }
   default-window-height   { fixed 100; }
