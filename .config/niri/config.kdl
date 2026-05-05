@@ -96,10 +96,10 @@ binds {
   Mod+E             { spawn "thunar"; }
   Mod+B             { spawn "zen-browser"; }
   Mod+L             { spawn "hyprlock"; }
-  // Mod+R             { spawn-sh "$HOME/.config/scripts/fuzzel/menu.sh"; }
+  // Mod+R             { spawn-sh "$HOME/.config/scripts/fuzzel/applications.menu.sh"; }
   // Mod+R             { spawn-sh "kitty -T otter-launcher -e otter-launcher"; }
   Mod+R             { spawn-sh "kitty -T 'fzf applications' -e $HOME/.config/scripts/fzf/applications.menu.sh"; }
-  // Mod+P             { spawn-sh "$HOME/.config/scripts/fuzzel/powermenu.sh"; }
+  // Mod+P             { spawn-sh "$HOME/.config/scripts/fuzzel/power.menu.sh"; }
   Mod+P             { spawn-sh "kitty -T 'fzf power' -e $HOME/.config/scripts/fzf/power.menu.sh"; }
   Mod+Y             { spawn-sh "$HOME/.config/scripts/waybar/waybar.sh"; }
   Mod+U             { spawn-sh "kitty -T 'fzf wallpapers' -e $HOME/.config/scripts/fzf/wallpaper.menu.sh"; }
