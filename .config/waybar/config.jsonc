@@ -118,7 +118,7 @@
   },
 
   "clock": {
-    "format": "{:%H:%M:%S | %Y-%m-%d}",
+    "format": "{:%T | %F %a}",
     "interval": 1,
     // "tooltip": true,
     // "tooltip-format": "<tt>{calendar}</tt>",
