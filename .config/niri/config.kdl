@@ -44,7 +44,8 @@ spawn-at-startup      "hyprsunset"
 spawn-at-startup      "dunst"
 
 // applications
-spawn-sh-at-startup   "zen-browser && Telegram"
+spawn-at-startup      "zen-browser"
+spawn-sh-at-startup   "sleep 2 && Telegram"
 
 
 //
@@ -200,7 +201,7 @@ binds {
   Mod+Escape    allow-inhibiting=false    { toggle-keyboard-shortcuts-inhibit; }
 
   Mod+Shift+P   { quit; }
-  // Mod+Shift+P { power-off-monitors; }
+  // Mod+Shift+P   { power-off-monitors; }
 }
 
 recent-windows {
@@ -238,10 +239,9 @@ layout {
   default-column-width { proportion 0.5; }
 
   preset-column-widths {
-    proportion 0.25
+    proportion 0.33333
     proportion 0.5
-    proportion 0.75
-    proportion 1.0
+    proportion 0.66667
   }
 
   preset-window-heights {
