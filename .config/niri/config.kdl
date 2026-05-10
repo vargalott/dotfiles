@@ -319,8 +319,7 @@ window-rule {
 
 // always floating
 window-rule {
-  match app-id=r#"xdg-desktop-portal-.*"#
-  match app-id="^mpv$"
+  match app-id=r#"xdg-desktop-portal-.*"#  
   match app-id="^thunar$" title=r#"Rename.*"#
   match app-id="^thunar$" title=r#"File Operation Progress"#
   match app-id="^blueman-manager$"
@@ -331,10 +330,12 @@ window-rule {
   open-floating true
 }
 
-// floating fixed size xdg-desktop-portal-gtk, pavucontrol
+// always floating fixed size
 window-rule {
 	match app-id="^xdg-desktop-portal-gtk$"
 	match app-id="^org.pulseaudio.pavucontrol$"
+	match app-id="^mpv$"
+    match app-id="^Sxiv$"
 	open-floating true
 	default-column-width    { fixed 800; }
 	default-window-height   { fixed 600; }
@@ -346,7 +347,7 @@ window-rule {
   open-focused false
 }
 
-// floating fixed size otter-launcher, kitty+fzf/menu.sh
+// always floating fixed size otter-launcher, kitty+fzf/menu.sh
 window-rule {
   match app-id="^kitty$" title="^otter-launcher$"
   match app-id="^kitty$" title="^fzf applications$"
@@ -355,7 +356,7 @@ window-rule {
   default-window-height   { fixed 300; }
 }
 
-// floating fixed size kitty+fzf/powermenu.sh
+// always floating fixed size kitty+fzf/powermenu.sh
 window-rule {
   match app-id="^kitty$" title="^fzf power$"
   open-floating true
@@ -363,7 +364,7 @@ window-rule {
   default-window-height   { fixed 100; }
 }
 
-// floating fixed size kitty+fzf/wallpapermenu.sh
+// always floating fixed size kitty+fzf/wallpapermenu.sh
 window-rule {
   match app-id="^kitty$" title="^fzf wallpapers$"
   open-floating true
@@ -371,7 +372,7 @@ window-rule {
   default-window-height   { fixed 300; }
 }
 
-// floating fixed size at the corner cava in kitty
+// always floating fixed size at the corner cava in kitty
 window-rule {
   match app-id="^kitty$" title="^cava$"
   open-floating true
@@ -380,21 +381,21 @@ window-rule {
   default-window-height   { fixed 200; }
 }
 
-// floating at the corner steam notifications
+// always floating at the corner steam notifications
 window-rule {
   match app-id="^steam$" title=r#"notificationtoasts_\d+_desktop"#
   open-floating true
   default-floating-position x=0 y=0 relative-to="bottom-right"
 }
 
-// maximized non-floating steam applications
+// always maximized non-floating steam applications
 window-rule {
   match app-id="^steam_app_.*$"
   open-maximized true
   open-floating false
 }
 
-// fullscreen waydroid
+// always fullscreen waydroid
 window-rule {
   match app-id="^Waydroid$"
   open-fullscreen true
