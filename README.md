@@ -11,20 +11,29 @@ stow -v .
 ```sh
 niri
 hyprland
+
 zsh
-hyprpaper
-hyprlock
-hyprsunset
-waybar
-alacritty
+oh-my-posh
 kitty
+alacritty
+
+waybar
+awww
+hyprlock
+hyprpaper
+hyprsunset
+
 wofi
 fuzzel
-mako
+otter-launcher
 dunst
+mako
+
+fastfetch
+fzf
 ```
 
 |||||
 |-|-|-|-|
-| GTK2/3/4 Theme | [Gruvbox-GTK-Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) | Gruvbox-BL-LB-Dark-Medium | slightly modified |
-| Kvantum/QT Theme | [gruvbox-kvantum-themes](https://github.com/sachnr/gruvbox-kvantum-themes) | Dark | slightly modified |
+| GTK-2/3/4 | [Gruvbox-GTK-Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) | Gruvbox-BL-LB-Dark-Medium | slightly modified |
+| QT (Kvantum) | [gruvbox-kvantum-themes](https://github.com/sachnr/gruvbox-kvantum-themes) | Dark | slightly modified |
