@@ -39,8 +39,7 @@ spawn-sh-at-startup   "dbus-update-activation-environment --systemd WAYLAND_DISP
 spawn-sh-at-startup   "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-sh-at-startup   "$HOME/.config/scripts/waybar/waybar.sh"
 spawn-sh-at-startup   "thunar --daemon"
-spawn-at-startup      "hyprpaper"
-spawn-at-startup      "hyprsunset"
+spawn-at-startup      "awww-daemon"
 spawn-at-startup      "dunst"
 
 // applications
