@@ -386,7 +386,7 @@ window-rule {
 	match app-id="^xdg-desktop-portal-gtk$"
 	match app-id="^org.pulseaudio.pavucontrol$"
 	match app-id="^mpv$"
-    match app-id="^Sxiv$"
+    match app-id="^imv$"
 	open-floating true
 	default-column-width    { fixed 800; }
 	default-window-height   { fixed 600; }
