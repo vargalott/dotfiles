@@ -7,16 +7,9 @@
   // waybar attempts to initialize all listed modules unconditionally;
   // unsupported modules (e.g. hyprland/* on Niri or niri/* on Hyprland)
   // simply fail to initialize and are skipped without affecting the bar
-  "modules-left": [
-    "custom/logo",
-    "hyprland/workspaces",
-    "niri/workspaces",
-  ],
+  "modules-left": ["custom/logo", "hyprland/workspaces", "niri/workspaces"],
 
-  "modules-center": [
-    "hyprland/window",
-    "niri/window",
-  ],
+  "modules-center": ["hyprland/window", "niri/window"],
 
   "modules-right": [
     "privacy",
@@ -32,8 +25,7 @@
 
   "custom/logo": {
     "format": "\ue3bf",
-    "on-click": "( [[ -n $NIRI_SOCKET ]] && exec $HOME/.config/scripts/fuzzel/applications.menu.sh ) || ( [[ -n $HYPRLAND_INSTANCE_SIGNATURE ]] && exec $HOME/.config/scripts/wofi/applications.menu.sh )",
-    // "on-click": "kitty -T 'fzf applications' -e $HOME/.config/scripts/fzf/menu.sh",
+    "on-click": "$HOME/.config/scripts/common/applications.menu.sh",
     "tooltip-format": "Applications",
   },
 
@@ -105,7 +97,7 @@
     ],
     "max-volume": 100,
     "scroll-step": 2,
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
   },
 
   "wireplumber#value": {
@@ -152,8 +144,7 @@
 
   "custom/power": {
     "format": "\udb81\udc25",
-    "on-click": "( [[ -n $NIRI_SOCKET ]] && exec $HOME/.config/scripts/fuzzel/applications.menu.sh ) || ( [[ -n $HYPRLAND_INSTANCE_SIGNATURE ]] && exec $HOME/.config/scripts/wofi/applications.menu.sh )",
-    // "on-click": "kitty -T 'fzf power menu' -e $HOME/.config/scripts/fzf/powermenu.sh",
+    "on-click": "$HOME/.config/scripts/common/power.menu.sh",
     "tooltip-format": "Power Menu",
   },
 }
