@@ -1,6 +1,6 @@
 //
 // GLOBAL
-// https://yalter.github.io/niri/Configuration:-Miscellaneous
+// https://niri-wm.github.io/niri/Configuration:-Miscellaneous
 //
 prefer-no-csd
 screenshot-path null
@@ -17,7 +17,7 @@ hotkey-overlay {
 
 //
 // MONITORS
-// https://yalter.github.io/niri/Configuration:-Outputs
+// https://niri-wm.github.io/niri/Configuration:-Outputs
 //
 
 output "HDMI-A-1" {
@@ -30,8 +30,8 @@ output "HDMI-A-1" {
 
 //
 // AUTOSTART
-// https://yalter.github.io/niri/Configuration:-Miscellaneous#spawn-at-startup
-// https://yalter.github.io/niri/Configuration:-Miscellaneous#spawn-sh-at-startup
+// https://niri-wm.github.io/niri/Configuration:-Miscellaneous#spawn-at-startup
+// https://niri-wm.github.io/niri/Configuration:-Miscellaneous#spawn-sh-at-startup
 //
 
 // core
@@ -49,23 +49,23 @@ spawn-sh-at-startup   "sleep 2 && Telegram"
 
 //
 // INPUT
-// https://yalter.github.io/niri/Configuration:-Input
+// https://niri-wm.github.io/niri/Configuration:-Input
 //
 
 input {
   keyboard {
     xkb {
-      layout "us,ru"
-      options "grp:alt_shift_toggle"
+      layout       "us,ru"
+      options      "grp:alt_shift_toggle"
     }
 
-    repeat-delay 250
-    repeat-rate 35
+    repeat-delay   250
+    repeat-rate    35
   }
 
   mouse {
-    accel-speed 0.25
-    accel-profile "flat"
+    accel-speed    0.25
+    accel-profile  "flat"
   }
 
   // focus-follows-mouse
@@ -82,7 +82,7 @@ gestures {
 
 //
 // KEYBINDINGS
-// https://yalter.github.io/niri/Configuration:-Key-Bindings
+// https://niri-wm.github.io/niri/Configuration:-Key-Bindings
 //
 
 binds {
@@ -212,7 +212,7 @@ recent-windows {
 
 //
 // ENVIRONMENT VARIABLES
-// https://yalter.github.io/niri/Configuration:-Miscellaneous#environment
+// https://niri-wm.github.io/niri/Configuration:-Miscellaneous#environment
 //
 
 environment {
@@ -226,9 +226,9 @@ environment {
 
 //
 // LOOK AND FEEL
-// https://yalter.github.io/niri/Configuration:-Layout
-// https://yalter.github.io/niri/Configuration:-Animations
-// https://yalter.github.io/niri/Configuration:-Miscellaneous
+// https://niri-wm.github.io/niri/Configuration:-Layout
+// https://niri-wm.github.io/niri/Configuration:-Animations
+// https://niri-wm.github.io/niri/Configuration:-Miscellaneous
 //
 
 layout {
@@ -259,10 +259,10 @@ layout {
   }
 
   struts {
-    left 0
-    right 0
-    top 0
-    bottom 0
+    left    0
+    right   0
+    top     0
+    bottom  0
   }
 }
 
@@ -331,8 +331,8 @@ animations {
 // }
 
 cursor {
-  xcursor-theme "Bibata-Modern-Ice"
-  xcursor-size 24
+  xcursor-theme  "bibata-modern-ice"
+  xcursor-size   24
 }
 
 overview {
@@ -347,7 +347,7 @@ overview {
 
 //
 // WINDOW RULES
-// https://yalter.github.io/niri/Configuration:-Window-Rules
+// https://niri-wm.github.io/niri/Configuration:-Window-Rules
 //
 
 window-rule { open-maximized false; }
@@ -382,13 +382,13 @@ window-rule {
 
 // always floating fixed size
 window-rule {
-	match app-id="^xdg-desktop-portal-gtk$"
-	match app-id="^org.pulseaudio.pavucontrol$"
-	match app-id="^mpv$"
+  match app-id="^xdg-desktop-portal-gtk$"
+  match app-id="^org.pulseaudio.pavucontrol$"
+  match app-id="^mpv$"
   match app-id="^imv$"
-	open-floating true
-	default-column-width    { fixed 800; }
-	default-window-height   { fixed 600; }
+  open-floating true
+  default-column-width    { fixed 800; }
+  default-window-height   { fixed 600; }
 }
 
 // non-focused telegram when autostart
