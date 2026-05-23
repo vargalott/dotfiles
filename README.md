@@ -1,13 +1,19 @@
 ## dotfiles
 
-<img src=".github/desktop.png"/>
+####
+<p align=center"><img src=".github/desktop.png"/></p>
 
+####
+<p align=center"><img src=".github/telegram.png"/></p>
+
+#### init
 ```sh
 git clone https://github.com/vargalott/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 stow -v .
 ```
 
+#### software list
 ```sh
 niri
 hyprland
@@ -33,6 +39,7 @@ fastfetch
 fzf
 ```
 
+#### credits
 ||||
 |-|-|-|
 | GTK-2/3/4 | [Gruvbox-GTK-Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) | Gruvbox-BL-LB-Dark-Medium |
