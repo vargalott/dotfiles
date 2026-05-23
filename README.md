@@ -3,8 +3,8 @@
 <img src=".github/desktop.png"/>
 
 ```sh
-git clone https://github.com/vargalott/dotfiles.git ~
-cd ~/dotfiles
+git clone https://github.com/vargalott/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 stow -v .
 ```
 
