@@ -1,10 +1,10 @@
 Type=X-GNOME-Metatheme
 [Desktop Entry]
-Name=gruvbox
+Name=gruvbox-dark
 Comment=An Flat Gtk+ theme based on Elegant Design
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=gruvbox
-MetacityTheme=gruvbox
+GtkTheme=gruvbox-dark
+MetacityTheme=gruvbox-dark
 ButtonLayout=close,minimize,maximize:menu
