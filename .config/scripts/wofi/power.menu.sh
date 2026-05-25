@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-selected=$( pgrep -x wofi >/dev/null 2>&1 || echo -e "Shutdown\nReboot\nLock\nLogout" | \
-  wofi -i --conf ~/.config/wofi/powermenu.conf --style ~/.config/wofi/style.css )
+selected=$(
+  pgrep -x wofi >/dev/null 2>&1 ||
+  ( cd $HOME/.config/wofi && echo -e "Shutdown\nReboot\nLock\nLogout" | wofi -i --conf powermenu.conf --style style.css )
+)
 
 case $selected in
   "Shutdown")   systemctl poweroff ;;
