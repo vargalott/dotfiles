@@ -25,6 +25,7 @@ alias lt="ls --tree"
 alias ll="ls -aal --group-directories-first"
 alias ducks="du -hs * | sort -hr"
 alias reload="source ~/.zshrc"
+alias ytd="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]'"
 
 # plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
