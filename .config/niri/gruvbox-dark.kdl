@@ -1,0 +1,10 @@
+layout {
+  border {
+    active-color    "#d65d0e" // gruvbox:dark-mode(orange)
+    inactive-color  "#655c54" // gruvbox:dark-mode(bg3)
+  }
+}
+
+overview {
+  backdrop-color "#1d2021" // gruvbox:dark-mode(bg0_h)
+}
