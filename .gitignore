@@ -1,3 +1,13 @@
 Pictures/wallpapers/wallpaper.current
 .config/cava/
 !.config/cava/config
+
+# symlinks
+.config/alacritty/theme.toml
+.config/dunst/dunstrc
+.config/fuzzel/menu.ini
+.config/fuzzel/powermenu.ini
+.config/kitty/theme.conf
+.config/niri/theme.kdl
+.config/waybar/colors.css
+.config/wofi/colors.css
