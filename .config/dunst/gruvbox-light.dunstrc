@@ -1,0 +1,48 @@
+[global]
+monitor = 0
+font = Iosevka Nerd Font 12
+format = "<b>%s</b>\n%b"
+sort = update
+follow = none
+stack_duplicates = false
+markup = full
+
+width = 350
+height = 400
+corner_radius = 0
+frame_width = 3
+gap_size = 10
+offset = 10x10
+notification_limit = 4
+
+progress_bar = true
+progress_bar_height = 10
+progress_bar_frame_width = 1
+progress_bar_min_width = 150
+progress_bar_max_width = 250
+
+icon_position = right
+min_icon_size = 64
+max_icon_size = 64
+text_icon_padding = 10
+
+[experimental]
+per_monitor_dpi = false
+
+[urgency_low]
+timeout = 2
+background = "#fbf1c7"      # gruvbox:light-mode(bg)
+foreground = "#3c3836"      # gruvbox:light-mode(fg)
+frame_color = "#d65d0e"     # gruvbox:light-mode(orange)
+
+[urgency_normal]
+timeout = 4
+background = "#fbf1c7"      # gruvbox:light-mode(bg)
+foreground = "#3c3836"      # gruvbox:light-mode(fg)
+frame_color = "#d65d0e"     # gruvbox:light-mode(orange)
+
+[urgency_critical]
+timeout = 0
+background = "#fbf1c7"      # gruvbox:light-mode(bg)
+foreground = "#3c3836"      # gruvbox:light-mode(fg)
+frame_color = "#fb4934"     # gruvbox:light-mode(red)
