@@ -1,0 +1,23 @@
+[colors.primary]
+background = "#fbf1c7" # gruvbox:light-mode(bg)
+foreground = "#3c3836" # gruvbox:light-mode(fg)
+
+[colors.normal]
+black   = "#fbf1c7" # gruvbox:light-mode(bg)
+red     = "#cc241d" # gruvbox:light-mode(red)
+green   = "#98971a" # gruvbox:light-mode(green)
+yellow  = "#d79921" # gruvbox:light-mode(yellow)
+blue    = "#458588" # gruvbox:light-mode(blue)
+magenta = "#b16286" # gruvbox:light-mode(purple)
+cyan    = "#689d6a" # gruvbox:light-mode(aqua)
+white   = "#7c6f64" # gruvbox:light-mode(gray)
+
+[colors.bright]
+black   = "#928374" # gruvbox:light-mode(gray)
+red     = "#9d0006" # gruvbox:light-mode(red)
+green   = "#79740e" # gruvbox:light-mode(green)
+yellow  = "#b57614" # gruvbox:light-mode(yellow)
+blue    = "#076678" # gruvbox:light-mode(blue)
+magenta = "#8f3f71" # gruvbox:light-mode(purple)
+cyan    = "#427b58" # gruvbox:light-mode(aqua)
+white   = "#3c3836" # gruvbox:light-mode(fg)
