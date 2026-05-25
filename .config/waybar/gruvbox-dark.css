@@ -1,0 +1,4 @@
+@define-color background #282828; /* gruvbox:dark-mode(bg0) */
+@define-color foreground #ebdbb2; /* gruvbox:dark-mode(fg) */
+@define-color accent-1 #d65d0e; /* gruvbox:dark-mode(orange) */
+@define-color accent-2 #cc241d; /* gruvbox:dark-mode(red) */
