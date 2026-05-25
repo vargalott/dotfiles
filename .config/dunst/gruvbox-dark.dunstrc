@@ -31,18 +31,18 @@ per_monitor_dpi = false
 
 [urgency_low]
 timeout = 2
-background = "#282828"      # gruvbox:dark-mode(bg)
-foreground = "#ebdbb2"      # gruvbox:dark-mode(fg)
-frame_color = "#d65d0e"     # gruvbox:dark-mode(orange)
+background = "#282828"      # gruvbox-dark(bg)
+foreground = "#ebdbb2"      # gruvbox-dark(fg)
+frame_color = "#d65d0e"     # gruvbox-dark(orange)
 
 [urgency_normal]
 timeout = 4
-background = "#282828"      # gruvbox:dark-mode(bg)
-foreground = "#ebdbb2"      # gruvbox:dark-mode(fg)
-frame_color = "#d65d0e"     # gruvbox:dark-mode(orange)
+background = "#282828"      # gruvbox-dark(bg)
+foreground = "#ebdbb2"      # gruvbox-dark(fg)
+frame_color = "#d65d0e"     # gruvbox-dark(orange)
 
 [urgency_critical]
 timeout = 0
-background = "#282828"      # gruvbox:dark-mode(bg)
-foreground = "#ebdbb2"      # gruvbox:dark-mode(fg)
-frame_color = "#fb4934"     # gruvbox:dark-mode(red)
+background = "#282828"      # gruvbox-dark(bg)
+foreground = "#ebdbb2"      # gruvbox-dark(fg)
+frame_color = "#fb4934"     # gruvbox-dark(red)
