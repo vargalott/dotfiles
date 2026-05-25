@@ -3,8 +3,9 @@ set -euo pipefail
 IFS=$'\n\t'
 
 colors="black blue caramel citron firebrick gold green grey highland jade lavender lime olive orange pistachio plasma pumpkin purple red rust sapphire tomato violet white yellow"
-default_color="plasma"
-icon_pack_theme="gruvbox-icons-dark"
+default_color="grey"
+default_icon_pack_theme="gruvbox-icons-dark"
+icon_pack_theme="${default_icon_pack_theme}"
 
 help() {
   printf "Folders color chooser
@@ -12,13 +13,14 @@ help() {
 Current color: $(current_color "-")
 
 Usage:
-  ${0##*/} [-c | --color=<color>] [-C | --reset-color]
+  ${0##*/} [-c | --color=<color>] [-C | --reset-color] [-t | --theme=<theme>]
   ${0##*/} [-h | --help]
   ${0##*/} [-l | --list]
 
 Options:
   -c, --color=<color>   set the new folders color
   -C, --reset-color     reset folder color to ${default_color}
+  -t, --theme=<theme>   icon pack theme (default: ${default_icon_pack_theme})
   -h, --help            show this help
   -l, --list            list available colors
 "
@@ -63,30 +65,29 @@ current_color() {
 
 folders_color=""
 
-while getopts cChl-: OPT; do
+while getopts c:Ct:hl-: OPT; do
   if [ "$OPT" = "-" ]; then   # long option: reformulate OPT and OPTARG
     OPT="${OPTARG%%=*}"       # extract long option name
     OPTARG="${OPTARG#"$OPT"}" # extract long option argument (may be empty)
     OPTARG="${OPTARG#=}"      # if long option argument, remove assigning `=`
-  else
-    OPTARG=""
   fi
   case "$OPT" in
     -)
       break ;;
+    t | theme)
+      if [ -z "${OPTARG}" ]; then
+        echo "Missing value for '${OPT}' option. Please provide a theme name." >&2
+        exit 1
+      fi
+      icon_pack_theme="${OPTARG}" ;;
     c | color)
       if [ -z "${OPTARG}" ]; then
-        if [[ "$#" -gt 1 ]]; then
-          shift ; folders_color="$1"
-        else
-          echo "Missing value for '${OPT}' option. Please provide a color." >&2
-          echo "Available colors are:"
-          echo "${colors}"
-          exit 1
-        fi
-      else
-        folders_color="${OPTARG}"
-      fi ;;
+        echo "Missing value for '${OPT}' option. Please provide a color." >&2
+        echo "Available colors are:"
+        echo "${colors}"
+        exit 1
+      fi
+      folders_color="${OPTARG}" ;;
     C | reset-color)
       folders_color="${default_color}" ;;
     h | help)
