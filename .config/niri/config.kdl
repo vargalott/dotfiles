@@ -37,16 +37,16 @@ output "HDMI-A-1" {
 //
 
 // core
-spawn-sh-at-startup   "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-spawn-sh-at-startup   "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup      "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
+spawn-at-startup      "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-sh-at-startup   "$HOME/.config/scripts/waybar/waybar.sh"
-spawn-sh-at-startup   "thunar --daemon"
+// spawn-at-startup      "thunar" "--daemon"
 spawn-at-startup      "awww-daemon"
 spawn-at-startup      "dunst"
 
 // applications
 spawn-at-startup      "zen-browser"
-spawn-sh-at-startup   "sleep 2 && Telegram"
+spawn-at-startup      "Telegram" "-startintray"
 
 
 //
