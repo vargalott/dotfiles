@@ -26,14 +26,10 @@ alacritty
 waybar
 awww
 hyprlock
-hyprpaper
-hyprsunset
 
 wofi
 fuzzel
-otter-launcher
 dunst
-mako
 
 fastfetch
 fzf
