@@ -73,7 +73,7 @@ case $CURRENT_THEME in
 esac
 
 # app reloads
-kill $(pidof dunst) && setsif -f dunst
+kill $(pidof dunst) && setsid -f dunst
 $HOME/.config/scripts/waybar/waybar.sh
 kill -SIGUSR1 $(pidof kitty)
 # touch $HOME/.config/alacritty/alacritty.toml
