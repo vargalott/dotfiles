@@ -36,9 +36,11 @@ fzf
 ```
 
 #### credits
-||||
-|-|-|-|
-| GTK-2/3/4 | [Gruvbox-GTK-Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) | Gruvbox-BL-LB-Dark-Medium |
-| QT (Kvantum) | [gruvbox-kvantum-themes](https://github.com/sachnr/gruvbox-kvantum-themes) | Dark |
-| Cursor | [Bibata_Cursor](https://github.com/ful1e5/Bibata_Cursor) | Modern-Ice |
-| Icons | [gruvbox-plus-icon-pack](https://github.com/SylEleuth/gruvbox-plus-icon-pack) | Dark |
+
+- [Gruvbox-GTK-Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) - Gruvbox-BL-LB-Dark-Medium*, Gruvbox-BL-LB-Light-Medium*
+- [gruvbox-kvantum-themes](https://github.com/sachnr/gruvbox-kvantum-themes) - Dark Brown*, Light Brown*
+- [Bibata_Cursor](https://github.com/ful1e5/Bibata_Cursor) - Modern-Ice
+- [gruvbox-plus-icon-pack](https://github.com/SylEleuth/gruvbox-plus-icon-pack) - Dark, Light
+- [Ampersand](https://github.com/Andrey0189) - INSPIRATION! AND IMPROVEMENT!
+
+> \* modified
