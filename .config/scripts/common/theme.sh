@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# set -euxo pipefail
 
 CURRENT_THEME=$(gsettings get org.gnome.desktop.interface color-scheme | tr -d "'")
 case $CURRENT_THEME in
@@ -8,14 +9,14 @@ case $CURRENT_THEME in
     gsettings set org.gnome.desktop.interface gtk-theme     "gruvbox-dark"
     gsettings set org.gnome.desktop.interface icon-theme    "gruvbox-icons-dark"
     sed -i --follow-symlinks \
-      -e "s/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/" \
-      -e "s/^gtk-theme-name=.*/gtk-theme-name=gruvbox-dark/" \
-      -e "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=gruvbox-icons-dark/" \
+      -e "s|^gtk-application-prefer-dark-theme=.*|gtk-application-prefer-dark-theme=1|" \
+      -e "s|^gtk-theme-name=.*|gtk-theme-name=gruvbox-dark|" \
+      -e "s|^gtk-icon-theme-name=.*|gtk-icon-theme-name=gruvbox-icons-dark|" \
       "$HOME/.config/gtk-3.0/settings.ini" \
       "$HOME/.config/gtk-4.0/settings.ini"
     sed -i --follow-symlinks \
-      -e "s/^gtk-theme-name=.*/gtk-theme-name=\"gruvbox-dark\"/" \
-      -e "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=\"gruvbox-icons-dark\"/" \
+      -e "s|^gtk-theme-name=.*|gtk-theme-name=\"gruvbox-dark\"|" \
+      -e "s|^gtk-icon-theme-name=.*|gtk-icon-theme-name=\"gruvbox-icons-dark\"|" \
       "$HOME/.gtkrc-2.0"
 
     # qt (kvantum)
@@ -41,14 +42,14 @@ case $CURRENT_THEME in
     gsettings set org.gnome.desktop.interface gtk-theme     "gruvbox-light"
     gsettings set org.gnome.desktop.interface icon-theme    "gruvbox-icons-light"
     sed -i --follow-symlinks \
-      -e "s/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=0/" \
-      -e "s/^gtk-theme-name=.*/gtk-theme-name=gruvbox-light/" \
-      -e "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=gruvbox-icons-light/" \
+      -e "s|^gtk-application-prefer-dark-theme=.*|gtk-application-prefer-dark-theme=0|" \
+      -e "s|^gtk-theme-name=.*|gtk-theme-name=gruvbox-light|" \
+      -e "s|^gtk-icon-theme-name=.*|gtk-icon-theme-name=gruvbox-icons-light|" \
       "$HOME/.config/gtk-3.0/settings.ini" \
       "$HOME/.config/gtk-4.0/settings.ini"
     sed -i --follow-symlinks \
-      -e "s/^gtk-theme-name=.*/gtk-theme-name=\"gruvbox-light\"/" \
-      -e "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=\"gruvbox-icons-light\"/" \
+      -e "s|^gtk-theme-name=.*|gtk-theme-name=\"gruvbox-light\"|" \
+      -e "s|^gtk-icon-theme-name=.*|gtk-icon-theme-name=\"gruvbox-icons-light\"|" \
       "$HOME/.gtkrc-2.0"
 
     # qt (kvantum)
@@ -71,5 +72,9 @@ case $CURRENT_THEME in
   *) ;;
 esac
 
+# app reloads
+kill $(pidof dunst) && setsif -f dunst
 $HOME/.config/scripts/waybar/waybar.sh
 kill -SIGUSR1 $(pidof kitty)
+# touch $HOME/.config/alacritty/alacritty.toml
+kill $(pidof Telegram) && setsid -f Telegram -startintray
