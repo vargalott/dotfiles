@@ -30,6 +30,7 @@ case $CURRENT_THEME in
 
     # app specific
     ln -sf gruvbox-dark.toml              $HOME/.config/alacritty/theme.toml
+    ln -sf gruvbox-dark.theme             $HOME/.config/btop/themes/gruvbox.theme
     ln -sf gruvbox-dark.dunstrc           $HOME/.config/dunst/dunstrc
     ln -sf gruvbox-dark.menu.ini          $HOME/.config/fuzzel/menu.ini
     ln -sf gruvbox-dark.powermenu.ini     $HOME/.config/fuzzel/powermenu.ini
@@ -37,10 +38,6 @@ case $CURRENT_THEME in
     ln -sf gruvbox-dark.kdl               $HOME/.config/niri/theme.kdl
     ln -sf gruvbox-dark.css               $HOME/.config/waybar/colors.css
     ln -sf gruvbox-dark.css               $HOME/.config/wofi/colors.css
-
-    sed -i --follow-symlinks \
-      -e "s|^color_theme = .*|color_theme = \"$HOME/.config/btop/themes/gruvbox-dark.theme\"|" \
-      "$HOME/.config/btop/btop.conf"
   ;;
   "prefer-dark")
     # gtk general
@@ -69,6 +66,7 @@ case $CURRENT_THEME in
 
     # app specific
     ln -sf gruvbox-light.toml             $HOME/.config/alacritty/theme.toml
+    ln -sf gruvbox-light.theme            $HOME/.config/btop/themes/gruvbox.theme
     ln -sf gruvbox-light.dunstrc          $HOME/.config/dunst/dunstrc
     ln -sf gruvbox-light.menu.ini         $HOME/.config/fuzzel/menu.ini
     ln -sf gruvbox-light.powermenu.ini    $HOME/.config/fuzzel/powermenu.ini
@@ -76,10 +74,6 @@ case $CURRENT_THEME in
     ln -sf gruvbox-light.kdl              $HOME/.config/niri/theme.kdl
     ln -sf gruvbox-light.css              $HOME/.config/waybar/colors.css
     ln -sf gruvbox-light.css              $HOME/.config/wofi/colors.css
-
-    sed -i --follow-symlinks \
-      -e "s|^color_theme = .*|color_theme = \"$HOME/.config/btop/themes/gruvbox-light.theme\"|" \
-      "$HOME/.config/btop/btop.conf"
   ;;
   *) ;;
 esac
