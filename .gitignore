@@ -3,7 +3,12 @@ Pictures/wallpapers/wallpaper.current
 !.config/cava/config
 
 # symlinks
+.config/gtk-4.0/assets
+.config/gtk-4.0/gtk-dark.css
+.config/gtk-4.0/gtk.css
+
 .config/alacritty/theme.toml
+.config/btop/themes/gruvbox.theme
 .config/dunst/dunstrc
 .config/fuzzel/menu.ini
 .config/fuzzel/powermenu.ini
