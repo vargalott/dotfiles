@@ -4,7 +4,7 @@
 CURRENT_THEME=$(gsettings get org.gnome.desktop.interface color-scheme | tr -d "'")
 case $CURRENT_THEME in
   "prefer-light"|"default")
-    # gtk
+    # gtk general
     gsettings set org.gnome.desktop.interface color-scheme  "prefer-dark"
     gsettings set org.gnome.desktop.interface gtk-theme     "gruvbox-dark"
     gsettings set org.gnome.desktop.interface icon-theme    "gruvbox-icons-dark"
@@ -18,6 +18,12 @@ case $CURRENT_THEME in
       -e "s|^gtk-theme-name=.*|gtk-theme-name=\"gruvbox-dark\"|" \
       -e "s|^gtk-icon-theme-name=.*|gtk-icon-theme-name=\"gruvbox-icons-dark\"|" \
       "$HOME/.gtkrc-2.0"
+
+    # gtk4
+    find $HOME/.config/gtk-4.0/ -maxdepth 1 -type l -delete
+    ln -sf $HOME/.local/share/themes/gruvbox-dark/gtk-4.0/assets          $HOME/.config/gtk-4.0/assets
+    ln -sf $HOME/.local/share/themes/gruvbox-dark/gtk-4.0/gtk-dark.css    $HOME/.config/gtk-4.0/gtk-dark.css
+    ln -sf $HOME/.local/share/themes/gruvbox-dark/gtk-4.0/gtk.css         $HOME/.config/gtk-4.0/gtk.css
 
     # qt (kvantum)
     kvantummanager --set gruvbox-dark
@@ -37,7 +43,7 @@ case $CURRENT_THEME in
       "$HOME/.config/btop/btop.conf"
   ;;
   "prefer-dark")
-    # gtk
+    # gtk general
     gsettings set org.gnome.desktop.interface color-scheme  "prefer-light"
     gsettings set org.gnome.desktop.interface gtk-theme     "gruvbox-light"
     gsettings set org.gnome.desktop.interface icon-theme    "gruvbox-icons-light"
@@ -51,6 +57,12 @@ case $CURRENT_THEME in
       -e "s|^gtk-theme-name=.*|gtk-theme-name=\"gruvbox-light\"|" \
       -e "s|^gtk-icon-theme-name=.*|gtk-icon-theme-name=\"gruvbox-icons-light\"|" \
       "$HOME/.gtkrc-2.0"
+
+    # gtk4
+    find $HOME/.config/gtk-4.0/ -maxdepth 1 -type l -delete
+    ln -sf $HOME/.local/share/themes/gruvbox-light/gtk-4.0/assets         $HOME/.config/gtk-4.0/assets
+    ln -sf $HOME/.local/share/themes/gruvbox-light/gtk-4.0/gtk-dark.css   $HOME/.config/gtk-4.0/gtk-dark.css
+    ln -sf $HOME/.local/share/themes/gruvbox-light/gtk-4.0/gtk.css        $HOME/.config/gtk-4.0/gtk.css
 
     # qt (kvantum)
     kvantummanager --set gruvbox-light
