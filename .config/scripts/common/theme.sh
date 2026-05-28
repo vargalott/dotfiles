@@ -26,6 +26,10 @@ case $CURRENT_THEME in
     ln -sf $HOME/.local/share/themes/gruvbox-dark/gtk-4.0/gtk.css         $HOME/.config/gtk-4.0/gtk.css
 
     # qt (kvantum)
+    sed -i --follow-symlinks \
+      -e "s|^icon_theme=.*|icon_theme=gruvbox-icons-dark|" \
+      "$HOME/.config/qt5ct/qt5ct.conf" \
+      "$HOME/.config/qt6ct/qt6ct.conf"
     kvantummanager --set gruvbox-dark
 
     # app specific
@@ -62,6 +66,10 @@ case $CURRENT_THEME in
     ln -sf $HOME/.local/share/themes/gruvbox-light/gtk-4.0/gtk.css        $HOME/.config/gtk-4.0/gtk.css
 
     # qt (kvantum)
+    sed -i --follow-symlinks \
+      -e "s|^icon_theme=.*|icon_theme=gruvbox-icons-light|" \
+      "$HOME/.config/qt5ct/qt5ct.conf" \
+      "$HOME/.config/qt6ct/qt6ct.conf"
     kvantummanager --set gruvbox-light
 
     # app specific
