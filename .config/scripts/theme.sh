@@ -41,6 +41,7 @@ case $CURRENT_THEME in
     ln -sf gruvbox-dark.conf              $HOME/.config/kitty/theme.conf
     ln -sf gruvbox-dark.kdl               $HOME/.config/niri/theme.kdl
     ln -sf gruvbox-dark.css               $HOME/.config/waybar/colors.css
+    ln -sf gruvbox-dark.toml              $HOME/.config/wayle/themes/theme.toml
     ln -sf gruvbox-dark.css               $HOME/.config/wofi/colors.css
   ;;
   "prefer-dark")
@@ -81,14 +82,17 @@ case $CURRENT_THEME in
     ln -sf gruvbox-light.conf             $HOME/.config/kitty/theme.conf
     ln -sf gruvbox-light.kdl              $HOME/.config/niri/theme.kdl
     ln -sf gruvbox-light.css              $HOME/.config/waybar/colors.css
+    ln -sf gruvbox-light.toml             $HOME/.config/wayle/themes/theme.toml
     ln -sf gruvbox-light.css              $HOME/.config/wofi/colors.css
   ;;
   *) ;;
 esac
 
 # app reloads
-kill $(pidof dunst) && setsid -f dunst
-$HOME/.config/scripts/waybar/waybar.sh
+touch $HOME/.config/wayle/config.toml
 kill -SIGUSR1 $(pidof kitty)
-# touch $HOME/.config/alacritty/alacritty.toml
 kill $(pidof Telegram) && setsid -f Telegram -startintray
+
+# kill $(pidof dunst) && setsid -f dunst
+# $HOME/.config/scripts/waybar.sh
+# touch $HOME/.config/alacritty/alacritty.toml

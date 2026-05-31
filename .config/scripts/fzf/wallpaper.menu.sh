@@ -8,5 +8,5 @@ selected="$(
 
 [[ -z "$selected" ]] && exit
 ln -sf "$selected" $HOME/Pictures/wallpapers/wallpaper.current
-$HOME/.config/scripts/awww/awww.sh
+$HOME/.config/scripts/awww.sh
 kill $PPID
