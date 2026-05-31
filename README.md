@@ -16,19 +16,19 @@ stow -v .
 #### software list
 ```sh
 niri
-hyprland
 
 zsh
 oh-my-posh
 kitty
 alacritty
 
+wayle
 waybar
 awww
 hyprlock
 
-wofi
 fuzzel
+wofi
 dunst
 
 fastfetch
