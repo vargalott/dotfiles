@@ -1,0 +1,89 @@
+# Wayle configuration file
+
+imports = ["themes/theme.toml"]
+
+[general]
+font-sans = "Iosevka Nerd Font Propo"
+font-mono = "Iosevka Nerd Font Propo"
+tearing-mode = true
+
+[bar]
+scale = 0.949999988079071
+border-width = 0
+button-variant = "basic"
+button-bg-opacity = 0
+
+[[bar.layout]]
+monitor = "HDMI-A-1"
+show = true
+left = ["niri-workspaces"]
+center = ["window-title"]
+right = [
+    "volume",
+    "systray",
+    "clock",
+    "keyboard-input",
+    "notifications",
+]
+
+[modules.clock]
+format = "%T | %F %a"
+icon-show = false
+label-color = "fg-default"
+dropdown-show-seconds = true
+
+[modules.dashboard]
+dropdown-lock-command = "hyprlock"
+dropdown-logout-command = "niri msg action quit -s"
+dropdown-reboot-command = "systemctl reboot"
+dropdown-poweroff-command = "systemctl poweroff"
+
+[modules.keyboard-input]
+icon-show = false
+label-color = "fg-default"
+left-click = "niri msg action switch-layout next"
+
+[modules.keyboard-input.layout-alias-map]
+Russian = "ru"
+"English (US)" = "en"
+
+[modules.niri-workspaces]
+display-mode = "none"
+app-icons-show = true
+active-color = "#d65d0e"
+
+[modules.notifications]
+icon-show = false
+icon-color = "fg-default"
+label-color = "fg-default"
+icon-source = "automatic"
+popup-position = "top-right"
+popup-max-visible = 4
+popup-stacking-order = "newest-first"
+popup-duration = 3000
+
+[modules.systray]
+icon-scale = 0.800000011920929
+item-gap = 0.5
+
+[modules.volume]
+icon-show = false
+label-color = "fg-default"
+scroll-up = "wayle audio output-volume +2"
+scroll-down = "wayle audio output-volume -2"
+
+[modules.weather]
+location = "Mariupol"
+time-format = "24h"
+
+[modules.window-title]
+icon-show = false
+label-color = "fg-default"
+
+[osd]
+position = "top"
+duration = 1000
+border = false
+
+[wallpaper]
+engine-enabled = false

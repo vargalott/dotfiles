@@ -1,0 +1,11 @@
+[styling.palette]
+bg = "#282828"
+surface = "#282828"
+elevated = "#3c3836"
+fg = "#ebdbb2"
+fg-muted = "#d5c4a1"
+primary = "#83a598"
+red = "#fb4934"
+yellow = "#fabd2f"
+green = "#b8bb26"
+blue = "#8ec07c"
