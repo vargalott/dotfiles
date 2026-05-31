@@ -3,14 +3,8 @@
   "layer": "top",
   "position": "top",
 
-  // compositor-specific modules may coexist in the config;
-  // waybar attempts to initialize all listed modules unconditionally;
-  // unsupported modules (e.g. hyprland/* on Niri or niri/* on Hyprland)
-  // simply fail to initialize and are skipped without affecting the bar
-  "modules-left": ["custom/logo", "hyprland/workspaces", "niri/workspaces"],
-
-  "modules-center": ["hyprland/window", "niri/window"],
-
+  "modules-left": ["custom/logo", "niri/workspaces"],
+  "modules-center": ["niri/window"],
   "modules-right": [
     "privacy",
     // "cava",
@@ -19,33 +13,16 @@
     "wireplumber#value",
     "clock",
     "niri/language",
-    "hyprland/language",
     "custom/power",
   ],
 
   "custom/logo": {
     "format": "\ue3bf",
-    "on-click": "$HOME/.config/scripts/common/applications.menu.sh",
+    "on-click": "$HOME/.config/scripts/fuzzel/applications.menu.sh",
     "tooltip-format": "Applications",
   },
 
   "niri/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "1": "\udb82\udf3a",
-      "2": "\udb82\udf3b",
-      "3": "\udb82\udf3c",
-      "4": "\udb82\udf3d",
-      "5": "\udb82\udf3e",
-      "6": "\udb82\udf3f",
-      "7": "\udb82\udf40",
-      "8": "\udb82\udf41",
-      "9": "\udb82\udf42",
-    },
-    "on-click": "activate",
-  },
-
-  "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
       "1": "\udb82\udf3a",
@@ -112,24 +89,6 @@
   "clock": {
     "format": "{:%T | %F %a}",
     "interval": 1,
-    // "tooltip": true,
-    // "tooltip-format": "<tt>{calendar}</tt>",
-    // "actions": {
-    //     "on-scroll-up": "shift_down",
-    //     "on-scroll-down": "shift_up",
-    // },
-    // "calendar": {
-    //     "mode": "month",
-    //     "weeks-pos": "right",
-    //     "on-scroll": 1,
-    //     "format": {
-    //         "months": "<span color='#d65d0e'><b>{}</b></span>",         // gruvbox-dark(orange)
-    //         "days": "<span color='#bdae93'><b>{}</b></span>",           // gruvbox-dark(fg3)
-    //         "weeks": "<span color='#fabd2f'><b>{:%V}</b></span>",       // gruvbox-dark(yellow)
-    //         "weekdays": "<span color='#fabd2f'><b>{}</b></span>",       // gruvbox-dark(yellow)
-    //         "today": "<span color='#fb4934'><b><u>{}</u></b></span>"    // gruvbox-dark(red)
-    //     }
-    // }
   },
 
   "niri/language": {
@@ -137,14 +96,9 @@
     "on-click": "niri msg action switch-layout next",
   },
 
-  "hyprland/language": {
-    "format": "{short}",
-    "on-click": "hyprctl switchxkblayout current next",
-  },
-
   "custom/power": {
     "format": "\udb81\udc25",
-    "on-click": "$HOME/.config/scripts/common/power.menu.sh",
+    "on-click": "$HOME/.config/scripts/fuzzel/power.menu.sh",
     "tooltip-format": "Power Menu",
   },
 }
