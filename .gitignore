@@ -15,4 +15,5 @@ Pictures/wallpapers/wallpaper.current
 .config/kitty/theme.conf
 .config/niri/theme.kdl
 .config/waybar/colors.css
+.config/wayle/themes/theme.toml
 .config/wofi/colors.css
