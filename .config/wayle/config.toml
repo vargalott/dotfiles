@@ -60,7 +60,7 @@ icon-source = "automatic"
 popup-position = "top-right"
 popup-max-visible = 4
 popup-stacking-order = "newest-first"
-popup-duration = 3000
+popup-duration = 5000
 
 [modules.systray]
 icon-scale = 0.800000011920929
