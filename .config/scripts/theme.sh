@@ -91,7 +91,7 @@ esac
 # app reloads
 touch $HOME/.config/wayle/config.toml
 kill -SIGUSR1 $(pidof kitty)
-kill $(pidof Telegram) && setsid -f Telegram -startintray
+# kill $(pidof Telegram) && setsid -f Telegram -startintray
 
 # kill $(pidof dunst) && setsid -f dunst
 # $HOME/.config/scripts/waybar.sh
