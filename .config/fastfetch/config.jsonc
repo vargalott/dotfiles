@@ -1,14 +1,8 @@
-//    ______           __  ______      __
-//   / ____/___ ______/ /_/ ____/___ _/ /_
-//  / /_  / __ `/ ___/ __/ /   / __ `/ __/
-// / __/ / /_/ (__  ) /_/ /___/ /_/ / /_
-///_/    \__,_/____/\__/\____/\__,_/\__/
-//  https://github.com/m3tozz/FastCat
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": null,
   "display": {
-    "separator": " ›  ",
+    "separator": "   ",
   },
   "modules": [
     "break",
@@ -18,29 +12,41 @@
       "keyColor": "31",
     },
     {
-      "type": "kernel",
-      "key": "KER ",
+      "type": "cpu",
+      "key": "CPU ",
+      "format": "{cores-logical} x {name}",
       "keyColor": "32",
     },
     {
-      "type": "packages",
-      "key": "PKG ",
+      "type": "memory",
+      "key": "RAM ",
       "keyColor": "33",
     },
     {
-      "type": "shell",
-      "key": "SH  ",
+      "type": "gpu",
+      "key": "GPU ",
+      "format": "{name}",
       "keyColor": "34",
     },
     {
-      "type": "terminal",
-      "key": "TER ",
+      "type": "kernel",
+      "key": "KER ",
       "keyColor": "35",
     },
     {
       "type": "wm",
       "key": "WM  ",
       "keyColor": "36",
+    },
+    {
+      "type": "shell",
+      "key": "SH  ",
+      "keyColor": "37",
+    },
+    {
+      "type": "terminal",
+      "key": "TER ",
+      "keyColor": "38",
     },
     "break",
   ],
