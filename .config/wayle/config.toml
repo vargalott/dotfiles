@@ -19,8 +19,8 @@ show = true
 left = ["niri-workspaces"]
 center = ["window-title"]
 right = [
-    "volume",
     "systray",
+    "volume",
     "clock",
     "keyboard-input",
     "notifications",
