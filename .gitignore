@@ -2,6 +2,9 @@ Pictures/wallpapers/wallpaper.current
 .config/cava/
 !.config/cava/config
 
+.local/share/icons/gruvbox-icons-dark/icon-theme.cache
+.local/share/icons/gruvbox-icons-light/icon-theme.cache
+
 # symlinks
 .config/gtk-4.0/assets
 .config/gtk-4.0/gtk-dark.css
