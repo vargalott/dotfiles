@@ -302,8 +302,9 @@ overview {
 
 
 //
-// WINDOW RULES
+// WINDOW & LAYER RULES
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
+// https://niri-wm.github.io/niri/Configuration%3A-Layer-Rules.html
 //
 
 window-rule { open-maximized false; }
@@ -407,6 +408,7 @@ window-rule {
   open-fullscreen true
 }
 
+// awww at the backdrop
 layer-rule {
   match namespace="^awww-daemon$"
   place-within-backdrop true
