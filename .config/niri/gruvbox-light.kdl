@@ -4,7 +4,3 @@ layout {
     inactive-color  "#bdae93" // gruvbox-light(bg3)
   }
 }
-
-overview {
-  backdrop-color "#f9f5d7" // gruvbox-light(bg0_h)
-}
