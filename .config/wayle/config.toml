@@ -71,6 +71,7 @@ icon-show = false
 label-color = "fg-default"
 scroll-up = "wayle audio output-volume +2"
 scroll-down = "wayle audio output-volume -2"
+right-click = "kitty -T cava -e cava"
 
 [modules.weather]
 location = "Mariupol"
