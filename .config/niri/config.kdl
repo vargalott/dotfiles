@@ -7,17 +7,12 @@ include "theme.kdl"
 prefer-no-csd
 screenshot-path null
 
-xwayland-satellite {
-  path "xwayland-satellite"
-}
+xwayland-satellite { path "xwayland-satellite"; }
+debug { honor-xdg-activation-with-invalid-serial; }
 
 hotkey-overlay {
   skip-at-startup
   hide-not-bound
-}
-
-debug {
-  honor-xdg-activation-with-invalid-serial
 }
 
 
@@ -80,11 +75,7 @@ input {
   // workspace-auto-back-and-forth
 }
 
-gestures {
-  hot-corners {
-    off
-  }
-}
+gestures { hot-corners { off; }; }
 
 
 //
@@ -240,9 +231,8 @@ environment {
 //
 
 layout {
-  background-color "transparent"
-
   gaps 0
+  background-color "transparent"
   center-focused-column "on-overflow"
 
   default-column-width { proportion 0.5; }
@@ -273,9 +263,7 @@ layout {
   }
 }
 
-animations {
-  off
-}
+animations { off; }
 
 cursor {
   xcursor-theme  "bibata-modern-ice"
@@ -284,10 +272,7 @@ cursor {
 
 overview {
   zoom 0.6
-
-  workspace-shadow {
-    off
-  }
+  workspace-shadow { off; }
 }
 
 
@@ -303,6 +288,7 @@ window-rule { open-maximized false; }
 window-rule {
   match app-id="^zen$"
   match app-id="^firefox$"
+  match app-id="^helium$"
   match app-id="^librewolf$"
   match app-id="^Tor Browser$"
   match app-id="^org.telegram.desktop$"
@@ -344,9 +330,8 @@ window-rule {
   open-focused false
 }
 
-// always floating fixed size otter-launcher, kitty+fzf/menu.sh
+// always floating fixed size kitty+fzf/menu.sh
 window-rule {
-  match app-id="^kitty$" title="^otter-launcher$"
   match app-id="^kitty$" title="^fzf applications$"
   open-floating true
   default-column-width    { fixed 400; }
