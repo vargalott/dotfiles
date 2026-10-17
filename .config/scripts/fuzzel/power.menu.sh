@@ -7,5 +7,5 @@ case $selected in
   "Shutdown")     systemctl poweroff ;;
   "Reboot")       systemctl reboot ;;
   "Lock")         hyprlock ;;
-  "Logout")       niri msg action quit -s ;;
+  "Logout")       niri msg action quit -s || mmsg dispatch quit ;;
 esac
