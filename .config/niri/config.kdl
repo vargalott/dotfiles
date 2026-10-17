@@ -319,6 +319,7 @@ window-rule {
   match app-id="^org.pulseaudio.pavucontrol$"
   match app-id="^mpv$"
   match app-id="^imv$"
+  match app-id="^kitty$" title="^fzf wallpapers$"
   open-floating true
   default-column-width    { fixed 800; }
   default-window-height   { fixed 600; }
@@ -344,14 +345,6 @@ window-rule {
   open-floating true
   default-column-width    { fixed 125; }
   default-window-height   { fixed 100; }
-}
-
-// always floating fixed size kitty+fzf/wallpapermenu.sh
-window-rule {
-  match app-id="^kitty$" title="^fzf wallpapers$"
-  open-floating true
-  default-column-width    { fixed 800; }
-  default-window-height   { fixed 300; }
 }
 
 // always floating fixed size at the corner cava in kitty
