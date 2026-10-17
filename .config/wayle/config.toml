@@ -16,7 +16,7 @@ button-bg-opacity = 0
 [[bar.layout]]
 monitor = "HDMI-A-1"
 show = true
-left = ["niri-workspaces"]
+left = ["niri-workspaces", "mango-workspaces"]
 center = ["window-title"]
 right = [
     "systray",
@@ -32,16 +32,10 @@ icon-show = false
 label-color = "fg-default"
 dropdown-show-seconds = true
 
-[modules.dashboard]
-dropdown-lock-command = "hyprlock"
-dropdown-logout-command = "niri msg action quit -s"
-dropdown-reboot-command = "systemctl reboot"
-dropdown-poweroff-command = "systemctl poweroff"
-
 [modules.keyboard-input]
 icon-show = false
 label-color = "fg-default"
-left-click = "niri msg action switch-layout next"
+left-click = "niri msg action switch-layout next || mmsg dispatch switch_keyboard_layout"
 
 [modules.keyboard-input.layout-alias-map]
 Russian = "ru"
@@ -52,13 +46,18 @@ display-mode = "none"
 app-icons-show = true
 active-color = "#d65d0e"
 
+[modules.mango-workspaces]
+display-mode = "none"
+app-icons-show = true
+active-color = "#d65d0e"
+
 [modules.notifications]
 icon-show = false
 icon-color = "fg-default"
 label-color = "fg-default"
 icon-source = "automatic"
 popup-position = "top-center"
-popup-max-visible = 4
+popup-max-visible = 1
 popup-stacking-order = "newest-first"
 popup-duration = 5000
 
