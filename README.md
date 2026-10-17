@@ -16,6 +16,7 @@ stow -v .
 #### software list
 ```sh
 niri
+mango (experimental)
 
 zsh
 oh-my-posh
