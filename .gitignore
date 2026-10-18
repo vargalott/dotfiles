@@ -16,6 +16,7 @@ Pictures/wallpapers/wallpaper.current
 .config/fuzzel/menu.ini
 .config/fuzzel/powermenu.ini
 .config/kitty/theme.conf
+.config/mango/theme.conf
 .config/niri/theme.kdl
 .config/waybar/colors.css
 .config/wayle/themes/theme.toml

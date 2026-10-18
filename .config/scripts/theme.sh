@@ -39,6 +39,7 @@ case $CURRENT_THEME in
     ln -sf gruvbox-dark.menu.ini          $HOME/.config/fuzzel/menu.ini
     ln -sf gruvbox-dark.powermenu.ini     $HOME/.config/fuzzel/powermenu.ini
     ln -sf gruvbox-dark.conf              $HOME/.config/kitty/theme.conf
+    ln -sf gruvbox-dark.conf              $HOME/.config/mango/theme.conf
     ln -sf gruvbox-dark.kdl               $HOME/.config/niri/theme.kdl
     ln -sf gruvbox-dark.css               $HOME/.config/waybar/colors.css
     ln -sf gruvbox-dark.toml              $HOME/.config/wayle/themes/theme.toml
@@ -80,6 +81,7 @@ case $CURRENT_THEME in
     ln -sf gruvbox-light.menu.ini         $HOME/.config/fuzzel/menu.ini
     ln -sf gruvbox-light.powermenu.ini    $HOME/.config/fuzzel/powermenu.ini
     ln -sf gruvbox-light.conf             $HOME/.config/kitty/theme.conf
+    ln -sf gruvbox-light.conf             $HOME/.config/mango/theme.conf
     ln -sf gruvbox-light.kdl              $HOME/.config/niri/theme.kdl
     ln -sf gruvbox-light.css              $HOME/.config/waybar/colors.css
     ln -sf gruvbox-light.toml             $HOME/.config/wayle/themes/theme.toml
