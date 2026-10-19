@@ -44,11 +44,13 @@ Russian = "ru"
 [modules.niri-workspaces]
 display-mode = "none"
 app-icons-show = true
+app-icons-dedupe = false
 active-color = "#d65d0e"
 
 [modules.mango-workspaces]
 display-mode = "none"
 app-icons-show = true
+app-icons-dedupe = false
 active-color = "#d65d0e"
 
 [modules.notifications]
